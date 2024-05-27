@@ -3,6 +3,10 @@
 本目录
 补充：优达中文网关门了，因此那个纳米学位没了，国内替代品就是深蓝了！
 
+【中文字幕】迄今为止质量最高的无人驾驶（自动驾驶）入门课程，Udacity无人驾驶入门完整版：https://www.bilibili.com/video/BV1RU4y1R7dr?p=15&vd_source=070cf712cbaef234201f1602115617d7
+【中文字幕】Udacity无人驾驶工程师，全站质量最高的自动驾驶课程，自动驾驶学习必看，搭配无人驾驶入门效果更佳！：https://www.bilibili.com/video/BV1YS4y1Y7DP?p=1&vd_source=070cf712cbaef234201f1602115617d7
+
+
 apollo studio：
 https://apollo.baidu.com/
 
@@ -14,6 +18,10 @@ https://github.com/ApolloAuto
 
 百度自动驾驶技术系列课程（B站，四期，官网也有）：
 B站：https://space.bilibili.com/29274703/search/video?keyword=%E7%99%BE%E5%BA%A6%E8%87%AA%E5%8A%A8%E9%A9%BE%E9%A9%B6%E6%8A%80%E6%9C%AF%E7%B3%BB%E5%88%97%E8%AF%BE%E7%A8%8B
+
+
+
+apollo 精品课程：https://apollo.baidu.com/community/online-course
 
 
 深蓝学院（人工智能和无人驾驶）：https://www.shenlanxueyuan.com/courselist
@@ -45,24 +53,6 @@ opencv
 
 
 
-autoware：
-    https://blog.csdn.net/u012739527/article/details/123582767
-    https://www.guyuehome.com/36811
-    https://github.com/autowarefoundation/autoware
-    https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/
-    https://github.com/autowarefoundation/autoware_ai
-
-    https://autowarefoundation.github.io/autoware-documentation/main/
-    https://www.youtube.com/watch?v=XTmlhvlmcf8&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr){:target="_blank"
-          
-    Autoware + ROS2: https://blog.csdn.net/qq_37464479/article/details/117729715        
-    apollo与LG svl联合仿真：https://www.shenlanxueyuan.com/course/572?source=1
-    简析LGSVL自动驾驶仿真系统：https://blog.csdn.net/qq_36622009/article/details/123233720
-    Ubuntu系统下百度Apollo7.0与LGSVL2021.3联合教程：https://blog.csdn.net/weixin_51192941/article/details/126579122
-    【全新】自动驾驶框架Autoware源码解析与项目实战：https://cvlife.net/p/t_pc/goods_pc_detail/goods_detail/course_2ZpeirG04cDayEqoY30IPztaBJZ
-
-
-
 
 转行智驾算法工程师：
 
@@ -83,15 +73,13 @@ autoware：
 
 
 
-    Autoware全系列仿真操作指南：https://www.bilibili.com/cheese/play/ep487877?query_from=0&search_id=16955594302639449062&search_query=autoware&csource=common_hpsearch_null_null&spm_id_from=333.337.search-card.all.click
 
-    Autoware自动驾驶源码框架解析：https://www.bilibili.com/cheese/play/ss13490?query_from=0&search_id=16955594302639449062&search_query=autoware&csource=common_hpsearch_null_null&spm_id_from=333.337.search-card.all.click
 
     转行自动驾驶算法之路—自学必看！从零入门路径规划资源汇总：https://mp.weixin.qq.com/s/RUsKYk8Fjxpo57YrIytt4A
         https://www.bilibili.com/video/BV1K5411z7x6/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
 
 
-    apollo 精品课程：https://apollo.baidu.com/community/online-course
+
 
 
     关于端到端自动驾驶的一些基本概念：https://mp.weixin.qq.com/s?__biz=Mzk0ODYyOTIxNA==&mid=2247483999&idx=1&sn=d92e3516d5b8f06367badcc8c4cebb58&chksm=c2ca7c99ac4a15d2d652dfc440dd242ef8fa9582d16ec48db8e32bb7cbefb82eb5e15ae1203a&scene=132&exptype=timeline_recommend_article_extendread_samebiz&show_related_article=1&subscene=0&poc_token=HHxGU2ajFRDQukygSXiPk4seNHxFlA3sRtvAqJ21
@@ -103,9 +91,6 @@ autoware：
 
 
 
-    【中文字幕】迄今为止质量最高的无人驾驶（自动驾驶）入门课程，Udacity无人驾驶入门完整版：https://www.bilibili.com/video/BV1RU4y1R7dr?p=15&vd_source=070cf712cbaef234201f1602115617d7
-
-    【中文字幕】Udacity无人驾驶工程师，全站质量最高的自动驾驶课程，自动驾驶学习必看，搭配无人驾驶入门效果更佳！：https://www.bilibili.com/video/BV1YS4y1Y7DP?p=1&vd_source=070cf712cbaef234201f1602115617d7
 
 
-    开源自动驾驶模拟器CARLA使用教程：https://www.jianshu.com/p/5c1f846e8dc1
+
