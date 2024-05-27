@@ -1,0 +1,36 @@
+
+autoware：
+    https://blog.csdn.net/u012739527/article/details/123582767
+    https://www.guyuehome.com/36811
+    https://github.com/autowarefoundation/autoware
+    https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/
+    https://github.com/autowarefoundation/autoware_ai
+
+    官网传送门: https://www.autoware.org/
+
+    https://autowarefoundation.github.io/autoware-documentation/main/
+    https://www.youtube.com/watch?v=XTmlhvlmcf8&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr){:target="_blank"
+          
+    Autoware + ROS2: https://blog.csdn.net/qq_37464479/article/details/117729715        
+    apollo与LG svl联合仿真：https://www.shenlanxueyuan.com/course/572?source=1
+    简析LGSVL自动驾驶仿真系统：https://blog.csdn.net/qq_36622009/article/details/123233720
+    Ubuntu系统下百度Apollo7.0与LGSVL2021.3联合教程：https://blog.csdn.net/weixin_51192941/article/details/126579122
+    【全新】自动驾驶框架Autoware源码解析与项目实战：https://cvlife.net/p/t_pc/goods_pc_detail/goods_detail/course_2ZpeirG04cDayEqoY30IPztaBJZ
+    https://lanzoup.cn/672133586131.html
+
+    Autoware全系列仿真操作指南：https://www.bilibili.com/cheese/play/ep487877?query_from=0&search_id=16955594302639449062&search_query=autoware&csource=common_hpsearch_null_null&spm_id_from=333.337.search-card.all.click
+
+    Autoware自动驾驶源码框架解析：https://www.bilibili.com/cheese/play/ss13490?query_from=0&search_id=16955594302639449062&search_query=autoware&csource=common_hpsearch_null_null&spm_id_from=333.337.search-card.all.click
+    
+    Self-Driving Cars with ROS 2 & Autoware：https://www.bilibili.com/video/BV16p4y1Y7jb/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
+    
+    
+    自动驾驶路径规划算法入门-autoware的实战使用：https://www.bilibili.com/video/BV1Rp4y1u7nw/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
+    
+    
+    自动驾驶开源项目Autoware.Auto介绍：https://www.bilibili.com/video/BV1fb4y1B7Zm/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
+    
+    sunswk：https://space.bilibili.com/46361693?spm_id_from=333.788.0.0
+    自动驾驶技术_1_基本介绍：https://www.bilibili.com/video/BV19A411T7Qb/?spm_id_from=333.999.0.0&vd_source=070cf712cbaef234201f1602115617d7
+            开源自动驾驶模拟器CARLA使用教程：https://www.jianshu.com/p/5c1f846e8dc1
+    智能驾驶C++知识点总结：https://www.bilibili.com/video/BV14q4y1R7Sc/?spm_id_from=333.788.recommend_more_video.1&vd_source=070cf712cbaef234201f1602115617d7
