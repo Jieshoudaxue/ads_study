@@ -79,7 +79,7 @@ opencv
         https://www.bilibili.com/video/BV1K5411z7x6/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
 
 
-
+    自动驾驶路径规划-控制决策入门学习：https://www.bilibili.com/video/BV1j94y1B7Ai/?spm_id_from=333.788&vd_source=070cf712cbaef234201f1602115617d7
 
 
     关于端到端自动驾驶的一些基本概念：https://mp.weixin.qq.com/s?__biz=Mzk0ODYyOTIxNA==&mid=2247483999&idx=1&sn=d92e3516d5b8f06367badcc8c4cebb58&chksm=c2ca7c99ac4a15d2d652dfc440dd242ef8fa9582d16ec48db8e32bb7cbefb82eb5e15ae1203a&scene=132&exptype=timeline_recommend_article_extendread_samebiz&show_related_article=1&subscene=0&poc_token=HHxGU2ajFRDQukygSXiPk4seNHxFlA3sRtvAqJ21
@@ -90,7 +90,7 @@ opencv
     如何转行进入自动驾驶行业,作为一个转行成功的人，简单聊聊~：https://www.bilibili.com/video/BV1Gh4y1t73P/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
 
 
-
+    重磅！国内首个面向自动驾驶领域的多传感器数据融合系统课程：https://mp.weixin.qq.com/s/0-mb6M6HvKU3Uau0a4taTw
 
 
 
