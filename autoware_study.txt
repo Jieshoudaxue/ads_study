@@ -1,38 +1,56 @@
+按照十步学习法学习 autoware：
 
-autoware：
-    https://blog.csdn.net/u012739527/article/details/123582767
-    https://www.guyuehome.com/36811
+1 第一部分 只做一次
+1.1 了解全局
+（1）
+
+
+
+
+官网传送门: 
+    https://www.autoware.org/
+
+autoware github官方主页：
     https://github.com/autowarefoundation/autoware
+
+autoware.auto github官方文档： 
+    https://autowarefoundation.github.io/autoware-documentation/main/
+
+autoware youtube官方主页：
+    https://www.youtube.com/@autowarefoundation
+
+autoware官方视频网站，资料：
+    https://www.apex.ai/autoware-course
+    https://www.youtube.com/watch?v=XTmlhvlmcf8&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr
+    B站中文翻译版（同youtube）：https://www.bilibili.com/video/BV16p4y1Y7jb/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
+    https://gitlab.com/ApexAI/autowareclass2020
+
+autoware 的昨天今天明天：
+    https://autoware.org/past-present-and-the-future-of-autoware/
+    https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/difference-from-ai-and-auto/
+
+autoware 公告区：
+    https://discourse.ros.org/c/autoware/46
+autoware 讨论区：
+    https://github.com/orgs/autowarefoundation/discussions
+autoware 项目区：
+    https://github.com/orgs/autowarefoundation/projects?query=is%3Aopen
+
+autoware 老的gitlab文档地址（2022年以后，autoware搬到github了）
     https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/
+autoware.ai github主页（2022年停更，目前只读）：
     https://github.com/autowarefoundation/autoware_ai
 
-    官网传送门: https://www.autoware.org/
+国内的讲解资料：
+    Autoware_ROS2发展环境课程介绍01: https://blog.csdn.net/qq_37464479/article/details/117729715  
+    自动驾驶开源项目Autoware.Auto介绍（重点）：https://www.bilibili.com/video/BV1fb4y1B7Zm/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
+    AutoWareAuto全框架梳理思维导图及代码注释（付费，350）：https://lanzoup.cn/672133586131.html 
 
-    https://autowarefoundation.github.io/autoware-documentation/main/
-    https://www.youtube.com/watch?v=XTmlhvlmcf8&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr){:target="_blank"
-          
-    Autoware + ROS2: https://blog.csdn.net/qq_37464479/article/details/117729715        
-    apollo与LG svl联合仿真：https://www.shenlanxueyuan.com/course/572?source=1
-    简析LGSVL自动驾驶仿真系统：https://blog.csdn.net/qq_36622009/article/details/123233720
-    Ubuntu系统下百度Apollo7.0与LGSVL2021.3联合教程：https://blog.csdn.net/weixin_51192941/article/details/126579122
-    
-    【全新】自动驾驶框架Autoware源码解析与项目实战：https://cvlife.net/p/t_pc/goods_pc_detail/goods_detail/course_2ZpeirG04cDayEqoY30IPztaBJZ
-    https://lanzoup.cn/672133586131.html Autoware全系列仿真操作指南：https://www.bilibili.com/cheese/play/ep487877?query_from=0&search_id=16955594302639449062&search_query=autoware&csource=common_hpsearch_null_null&spm_id_from=333.337.search-card.all.click Autoware自动驾驶源码框架解析：https://www.bilibili.com/cheese/play/ss13490?query_from=0&search_id=16955594302639449062&search_query=autoware&csource=common_hpsearch_null_null&spm_id_from=333.337.search-card.all.click
+国内的教学资料：
+    【全新】自动驾驶框架Autoware源码解析与项目实战（天宇，autoware.ai，付费）：https://cvlife.net/p/t_pc/goods_pc_detail/goods_detail/course_2ZpeirG04cDayEqoY30IPztaBJZ
+    autoware开发实践系列教程（autoware.ai，免费）：https://space.bilibili.com/1159861120/channel/collectiondetail?sid=499777&spm_id_from=333.788.0.0
+    Autoware全系列仿真操作指南（只讲解环境搭建，涉及三个版本的autoware，付费）：https://www.bilibili.com/cheese/play/ep487877?query_from=0&search_id=16955594302639449062&search_query=autoware&csource=common_hpsearch_null_null&spm_id_from=333.337.search-card.all.click 
     
     
 
-    自动驾驶开源项目Autoware.Auto介绍（重点）：https://www.bilibili.com/video/BV1fb4y1B7Zm/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7    
-    开源自动驾驶框架Autoware.Auto ROS2 官方教程：https://space.bilibili.com/291255401/video
-    Self-Driving Cars with ROS 2 & Autoware：https://www.bilibili.com/video/BV16p4y1Y7jb/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
-    
-    
-    自动驾驶路径规划算法入门-autoware的实战使用：https://www.bilibili.com/video/BV1Rp4y1u7nw/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
-    
-    
-    sunswk：https://space.bilibili.com/46361693?spm_id_from=333.788.0.0
-    自动驾驶技术_1_基本介绍：https://www.bilibili.com/video/BV19A411T7Qb/?spm_id_from=333.999.0.0&vd_source=070cf712cbaef234201f1602115617d7
-            开源自动驾驶模拟器CARLA使用教程：https://www.jianshu.com/p/5c1f846e8dc1
-    智能驾驶C++知识点总结：https://www.bilibili.com/video/BV14q4y1R7Sc/?spm_id_from=333.788.recommend_more_video.1&vd_source=070cf712cbaef234201f1602115617d7
-    
-    autoware开发实践系列教程：https://space.bilibili.com/1159861120/channel/collectiondetail?sid=499777&spm_id_from=333.788.0.0
     
