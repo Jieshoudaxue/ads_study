@@ -1,10 +1,8 @@
+
 百度+优达自动驾驶课程：
 官网：https://apollo.auto/devcenter/devcenter_cn.html
 本目录
 补充：优达中文网关门了，因此那个纳米学位没了，国内替代品就是深蓝了！
-
-【中文字幕】迄今为止质量最高的无人驾驶（自动驾驶）入门课程，Udacity无人驾驶入门完整版：https://www.bilibili.com/video/BV1RU4y1R7dr?p=15&vd_source=070cf712cbaef234201f1602115617d7
-【中文字幕】Udacity无人驾驶工程师，全站质量最高的自动驾驶课程，自动驾驶学习必看，搭配无人驾驶入门效果更佳！：https://www.bilibili.com/video/BV1YS4y1Y7DP?p=1&vd_source=070cf712cbaef234201f1602115617d7
 
 
 apollo studio：
@@ -23,40 +21,22 @@ B站：https://space.bilibili.com/29274703/search/video?keyword=%E7%99%BE%E5%BA%
 
 apollo 精品课程：https://apollo.baidu.com/community/online-course
 
-
 深蓝学院（人工智能和无人驾驶）：https://www.shenlanxueyuan.com/courselist
-
-好的博客：
-https://blog.csdn.net/AdamShan
-https://zhuanlan.zhihu.com/p/58422485
-
-技术栈：
-cmake，bazel
-protobuf
-docker
-ros
-opencv
-
-
-
-几个方向：
-    一是老孟的方向，我感觉应该重新搞起来了，这是未来在自动驾驶行业的核心竞争力，先学框架autoware再学细节；
-    二是老郭的方向，既然丢了，干脆就算了；
-    三是当前的方向，软件工程，目前看没啥戏，要么是继续打杂，要么继续搞集成
-    四是仿真的方向，但我感觉不太靠谱，几乎没有储备，仅仅是听起来感兴趣罢了
-    
-总结：核心还是要想之前那样，系统的学习智驾和机器人专业，目标应定为系统工程师。rule-base的知识是省不了的，没有这个做基础，也很难入门深度学习。
-
-自动驾驶规控算法工程师/PNC专家：https://wecruit.hotjob.cn/SU64819a4f2f9d2433ba8b043a/pb/posDetail.html?postId=65687cae1eb805776cdfa15e&postType=society
-自动驾驶技术在2024年将如何发展？：https://www.zhihu.com/question/637512929
-
-
 
 
 
 转行智驾算法工程师：
+    几个方向：
+        一是老孟的方向，我感觉应该重新搞起来了，这是未来在自动驾驶行业的核心竞争力，先学框架autoware再学细节；
+        二是老郭的方向，既然丢了，干脆就算了；
+        三是当前的方向，软件工程，目前看没啥戏，要么是继续打杂，要么继续搞集成
+        四是仿真的方向，但我感觉不太靠谱，几乎没有储备，仅仅是听起来感兴趣罢了
+        
+    总结：核心还是要想之前那样，系统的学习智驾和机器人专业，目标应定为系统工程师。rule-base的知识是省不了的，没有这个做基础，也很难入门深度学习。
 
-    智驾机器人技术前线：https://space.bilibili.com/350346884
+
+
+好的资料：
 
     如何转行成为一名自动驾驶算法工程师：https://www.bilibili.com/video/BV1vV411L7WY/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
         大概需要五步，总共需要一年左右，类似考研：
@@ -67,30 +47,52 @@ opencv
         5.找实习（小公司）：找工作
 
 
+    转行自动驾驶算法之路—自学必看！从零入门路径规划资源汇总：
+        https://mp.weixin.qq.com/s/RUsKYk8Fjxpo57YrIytt4A
+        https://www.bilibili.com/video/BV1K5411z7x6/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
+
+    如何转行进入自动驾驶行业,作为一个转行成功的人，简单聊聊~：https://www.bilibili.com/video/BV1Gh4y1t73P/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
+
+    sunswk：https://space.bilibili.com/46361693?spm_id_from=333.788.0.0
+    自动驾驶技术_1_基本介绍：https://www.bilibili.com/video/BV19A411T7Qb/?spm_id_from=333.999.0.0&vd_source=070cf712cbaef234201f1602115617d7
+    智能驾驶知识树总结（重点）：https://www.bilibili.com/video/BV14q4y1R7Sc/?spm_id_from=333.788.recommend_more_video.1&vd_source=070cf712cbaef234201f1602115617d7
+    《程序员的数学2、3》（完整版）：https://www.bilibili.com/video/BV1hg4y1v76D/?vd_source=070cf712cbaef234201f1602115617d7
+
+
+
+    自动驾驶规控算法工程师/PNC专家（地平线岗位）：https://wecruit.hotjob.cn/SU64819a4f2f9d2433ba8b043a/pb/posDetail.html?postId=65687cae1eb805776cdfa15e&postType=society
+
+
+    无人驾驶汽车系统入门：https://blog.csdn.net/adamshan/category_9280008.html
+    自动驾驶学习资料合集：https://zhuanlan.zhihu.com/p/58422485
+
+
+    【中文字幕】迄今为止质量最高的无人驾驶（自动驾驶）入门课程，Udacity无人驾驶入门完整版：https://www.bilibili.com/video/BV1RU4y1R7dr?p=15&vd_source=070cf712cbaef234201f1602115617d7
+    【中文字幕】Udacity无人驾驶工程师，全站质量最高的自动驾驶课程，自动驾驶学习必看，搭配无人驾驶入门效果更佳！：https://www.bilibili.com/video/BV1YS4y1Y7DP?p=1&vd_source=070cf712cbaef234201f1602115617d7
+    
+    
+    自动驾驶技术在2024年将如何发展？：
+        https://www.zhihu.com/question/637512929
+        https://mp.weixin.qq.com/s/7lUHSlxtC8XH-j5PGt1Bzg    
 
     规控学习小组分享：自动泊车规控算法分享：https://www.bilibili.com/video/BV1tj411J7tB/?spm_id_from=333.788&vd_source=070cf712cbaef234201f1602115617d7
     规控学习小组分享：自动驾驶常见规控算法分享-路径规划：https://www.bilibili.com/video/BV1Ve411o7Wi/?spm_id_from=333.788&vd_source=070cf712cbaef234201f1602115617d7
 
 
 
-
-
-    转行自动驾驶算法之路—自学必看！从零入门路径规划资源汇总：https://mp.weixin.qq.com/s/RUsKYk8Fjxpo57YrIytt4A
-        https://www.bilibili.com/video/BV1K5411z7x6/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
-
-
-
-
+    自动驾驶路径规划-控制决策入门学习：https://www.bilibili.com/video/BV1j94y1B7Ai/?spm_id_from=333.788&vd_source=070cf712cbaef234201f1602115617d7
 
     关于端到端自动驾驶的一些基本概念：https://mp.weixin.qq.com/s?__biz=Mzk0ODYyOTIxNA==&mid=2247483999&idx=1&sn=d92e3516d5b8f06367badcc8c4cebb58&chksm=c2ca7c99ac4a15d2d652dfc440dd242ef8fa9582d16ec48db8e32bb7cbefb82eb5e15ae1203a&scene=132&exptype=timeline_recommend_article_extendread_samebiz&show_related_article=1&subscene=0&poc_token=HHxGU2ajFRDQukygSXiPk4seNHxFlA3sRtvAqJ21
 
     自动驾驶决策规划论文交流（三）自动驾驶端到端论文：https://www.bilibili.com/video/BV1YF4m1N74o/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
 
+    重磅！国内首个面向自动驾驶领域的多传感器数据融合系统课程：https://mp.weixin.qq.com/s/0-mb6M6HvKU3Uau0a4taTw
 
-    如何转行进入自动驾驶行业,作为一个转行成功的人，简单聊聊~：https://www.bilibili.com/video/BV1Gh4y1t73P/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
+    apollo与LG svl联合仿真：https://www.shenlanxueyuan.com/course/572?source=1
+    简析LGSVL自动驾驶仿真系统：https://blog.csdn.net/qq_36622009/article/details/123233720
+    Ubuntu系统下百度Apollo7.0与LGSVL2021.3联合教程：https://blog.csdn.net/weixin_51192941/article/details/126579122
+
+    
 
 
-
-
-
-
+    
