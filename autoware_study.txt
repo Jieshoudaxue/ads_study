@@ -8,8 +8,8 @@
 （4）autoware 本身是一套完整的自动驾驶体系，包括传感器，感知，定制，规控，高清地图等等算法模块， 也能与 carla（支持ros） 和 LGsvl 两款仿真软件联合仿真，自身也有 AVP（代课泊车）和 cargo （机场物流小车）demo，可以说 autoware 既是理解自动驾驶知识最好的模板，也是锻炼实际工程能力的良好载体。
 
 1.2 和 1.3 确定范围和定义目标
-（1）学习 autoware.auto/core，主要是各个算法模块知识，包括原理和代码。掌握 carla 和 lgsvl 仿真测试知识，会与 autoware 联合仿真。
-（2）跑通 autoware.auto 的几个 demo，理解智驾数据流。理解 autoware 各个算法模块的代码框架，能把理论与代码结合起来，并能在仿真环境下进行调试，感受各个算法模块的差别。
+（1）跑通 autoware.auto 的几个 demo，理解智驾数据流。理解 autoware 各个算法模块的代码框架，能基本掌握原理和代码，并能初步对应起来，但不强求精通。
+（2）掌握 carla 和 lgsvl 仿真测试知识，会与 autoware 联合仿真。能在仿真环境下对算法进行调试，感受各个算法模块的差别。
 
 1.4 寻找资源
 官网传送门: 
@@ -20,6 +20,8 @@ autoware github官方主页：
 
 autoware.auto github官方文档： 
     https://autowarefoundation.github.io/autoware-documentation/main/
+autoware 老的gitlab文档地址（2022年以后，autoware搬到github了）
+    https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/
 
 autoware youtube官方主页：
     https://www.youtube.com/@autowarefoundation
@@ -41,8 +43,6 @@ autoware 讨论区：
 autoware 项目区：
     https://github.com/orgs/autowarefoundation/projects?query=is%3Aopen
 
-autoware 老的gitlab文档地址（2022年以后，autoware搬到github了）
-    https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/
 autoware.ai github主页（2022年停更，目前只读）：
     https://github.com/autowarefoundation/autoware_ai
 autoware官方学习仓库：
@@ -51,37 +51,105 @@ autoware官方学习仓库：
 博客资料：
     Autoware 软件开发指南（.ai，非常详细，高质量）：https://github.com/cyhasuka/Autoware-Manuals-Chinese?tab=readme-ov-file#jump4.0
     autoware.auto框架介绍：https://fishros.org.cn/forum/topic/299/autoware-auto%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D
-    自动代客泊车示例：http://lib.uml.com.cn/ebook/Autoware.Auto/Autoware955.asp
+    Autoware.Auto教程：http://lib.uml.com.cn/ebook/Autoware.Auto/Autoware955.asp
     Autoware.auto的安装、配置与测试（Docker版）https://www.guyuehome.com/37552
 
-国外视频资料：
-    Autoware Universe Training ：https://www.youtube.com/watch?v=xbLBJRSYybY&list=PLuCQPvHJs-PsdRduUGJxPq_FwF63FlB3a
-    Autoware install and tutorials：https://www.youtube.com/watch?v=iW-a7cKUxuY
 
-国内的讲解资料：
+国内的讲解资料（概况）：
     Autoware_ROS2发展环境课程介绍01: https://blog.csdn.net/qq_37464479/article/details/117729715  
     自动驾驶开源项目Autoware.Auto介绍（重点）：https://www.bilibili.com/video/BV1fb4y1B7Zm/?spm_id_from=333.337.search-card.all.click&vd_source=070cf712cbaef234201f1602115617d7
-    AutoWareAuto全框架梳理思维导图及代码注释（付费，350）：https://lanzoup.cn/672133586131.html 
 
     
 国内的教学资料：
     【全新】自动驾驶框架Autoware源码解析与项目实战（天宇，autoware.ai，付费）：https://cvlife.net/p/t_pc/goods_pc_detail/goods_detail/course_2ZpeirG04cDayEqoY30IPztaBJZ
-    autoware开发实践系列教程（autoware.ai，免费）：https://space.bilibili.com/1159861120/channel/collectiondetail?sid=499777&spm_id_from=333.788.0.0
     Autoware全系列仿真操作指南（只讲解环境搭建，涉及三个版本的autoware，付费）：https://www.bilibili.com/cheese/play/ep487877?query_from=0&search_id=16955594302639449062&search_query=autoware&csource=common_hpsearch_null_null&spm_id_from=333.337.search-card.all.click 
     
     
 1.5和1.6 创建学习计划和筛选资料
+（1）智驾的基础平台介绍，包括： HW，RTOS，DDS
+    Platform HW, RTOS and DDS：
+        https://www.youtube.com/watch?v=IyycN6ldsIs&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=4
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/04_Platform?ref_type=heads
 
 
+（2）智驾技术栈介绍，包括几种智驾开源框架介绍
+    Autonomous Driving Stacks：
+        https://www.youtube.com/watch?v=nTI4fnn2tuU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=5
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/05_Architectures?ref_type=heads
+
+（3）autoware.auto 环境搭建，框架梳理，demo 跑通（avp，cargo）
+    Development Environment：
+        https://www.youtube.com/watch?v=XTmlhvlmcf8&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=1
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/01_DevelopmentEnvironment?ref_type=heads
+
+    Autoware 101：
+        https://www.youtube.com/watch?v=eSHHmJrqpMU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=6
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/06_Autoware_101?ref_type=heads
 
 
+    Autoware Universe Training ：
+        https://www.youtube.com/watch?v=xbLBJRSYybY&list=PLuCQPvHJs-PsdRduUGJxPq_FwF63FlB3a
 
+    autoware.auto框架介绍:
+        https://fishros.org.cn/forum/topic/299/autoware-auto%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D
+    Autoware 软件开发指南: 
+        https://github.com/cyhasuka/Autoware-Manuals-Chinese?tab=readme-ov-file#jump2.2
+    Autoware.Auto教程：
+        http://lib.uml.com.cn/ebook/Autoware.Auto/Autoware955.asp
+    Autoware.auto的安装、配置与测试（Docker版）:
+        https://www.guyuehome.com/37552
 
+    autoware.auto github官方文档： 
+        https://autowarefoundation.github.io/autoware-documentation/main/
+    autoware 老的gitlab文档地址（2022年以后，autoware搬到github了）
+        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/
 
+（4）autoware.auto 感知，包括：lidar，camera，radar
+    Object Perception: LIDAR：
+        https://www.youtube.com/watch?v=xSGCpb24dhI&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=7
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/07_Object_Perception_LIDAR?ref_type=heads
+    Object Perception: CAMERA:
+        https://www.youtube.com/watch?v=OtjTa-meJ-E&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=8
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/08_Perception_Camera?ref_type=heads
+    Object Perception: RADAR:
+        https://www.youtube.com/watch?v=PcVIO-xoNv8&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=9
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/09_Perception_Radar?ref_type=heads
 
+    Autoware 软件开发指南: 
+        https://github.com/cyhasuka/Autoware-Manuals-Chinese?tab=readme-ov-file#jump2.2
 
+（5）autoware.auto 定位
+    State Estimation for Localization:
+        https://www.youtube.com/watch?v=g2YURb-d9vY&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=10
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/10_Localization?ref_type=heads
 
+    Autoware 软件开发指南: 
+        https://github.com/cyhasuka/Autoware-Manuals-Chinese?tab=readme-ov-file#jump2.2
 
+（6）lgvsl 与 autoware.auto 联合仿真
+    LGSVL Simulator:
+        https://www.youtube.com/watch?v=OcB6FUbjZXo&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=11
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/11_LGSVL_Simulator?ref_type=heads
+
+（7）autoware.auto 规控
+    Motion Control:
+        https://www.youtube.com/watch?v=fQJpAVRQBrI&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=12
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/12_Motion_Control?ref_type=heads
+
+    Autoware 软件开发指南: 
+        https://github.com/cyhasuka/Autoware-Manuals-Chinese?tab=readme-ov-file#jump2.2
+
+（8）autoware.auto 数据管理和分析
+    Data Storage and Analytics:
+        https://www.youtube.com/watch?v=vinP0zrnkyU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=13
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/13_MARV_Data_Analytics?ref_type=heads
+
+（9）autoware.auto 建图
+    HD Maps:
+        https://www.youtube.com/watch?v=cl9m6O4Yt0Y&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=14
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/14_HD_Maps?ref_type=heads
+
+（10）carla 与 autoware.auto 联合仿真
 
 
 
