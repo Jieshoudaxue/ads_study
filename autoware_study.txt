@@ -66,16 +66,16 @@ autoware官方学习仓库：
     
     
 1.5和1.6 创建学习计划和筛选资料
-（1）智驾的基础平台介绍，包括： HW，RTOS，DDS
+（1）智驾技术栈介绍，包括几种智驾开源框架介绍
+    Autonomous Driving Stacks：
+        https://www.youtube.com/watch?v=nTI4fnn2tuU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=5
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/05_Architectures?ref_type=heads
+
+（2）智驾的基础平台介绍，包括： HW，RTOS，DDS
     Platform HW, RTOS and DDS：
         https://www.youtube.com/watch?v=IyycN6ldsIs&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=4
         https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/04_Platform?ref_type=heads
 
-
-（2）智驾技术栈介绍，包括几种智驾开源框架介绍
-    Autonomous Driving Stacks：
-        https://www.youtube.com/watch?v=nTI4fnn2tuU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=5
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/05_Architectures?ref_type=heads
 
 （3）autoware.auto 环境搭建，框架梳理，demo 跑通（avp，cargo）
     Development Environment：
@@ -114,6 +114,18 @@ autoware官方学习仓库：
     Object Perception: RADAR:
         https://www.youtube.com/watch?v=PcVIO-xoNv8&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=9
         https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/09_Perception_Radar?ref_type=heads
+    
+    Perception：
+        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/autoware-perception-design.html
+    Fusion:
+        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/autoware-fusion-design.html
+    Prediction:    
+        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/autoware-prediction-design.html
+        
+    Perception Component Design：
+        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/perception/
+        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/components/perception/
+    
 
     Autoware 软件开发指南: 
         https://github.com/cyhasuka/Autoware-Manuals-Chinese?tab=readme-ov-file#jump2.2
@@ -123,10 +135,15 @@ autoware官方学习仓库：
         https://www.youtube.com/watch?v=g2YURb-d9vY&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=10
         https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/10_Localization?ref_type=heads
 
+    Localization：
+        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/autoware-localization-design.html
+    localization：
+        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/localization/
+
     Autoware 软件开发指南: 
         https://github.com/cyhasuka/Autoware-Manuals-Chinese?tab=readme-ov-file#jump2.2
 
-（6）lgvsl 与 autoware.auto 联合仿真
+（6）lgsvl 与 autoware.auto 联合仿真
     LGSVL Simulator:
         https://www.youtube.com/watch?v=OcB6FUbjZXo&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=11
         https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/11_LGSVL_Simulator?ref_type=heads
@@ -136,6 +153,16 @@ autoware官方学习仓库：
         https://www.youtube.com/watch?v=fQJpAVRQBrI&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=12
         https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/12_Motion_Control?ref_type=heads
 
+    Planning:
+        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/autoware-planning-design.html
+    Control:
+        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/autoware-control-design.html
+    
+    Planning component design:
+        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/planning/
+    Control component design:
+        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/control/
+    
     Autoware 软件开发指南: 
         https://github.com/cyhasuka/Autoware-Manuals-Chinese?tab=readme-ov-file#jump2.2
 
@@ -149,9 +176,22 @@ autoware官方学习仓库：
         https://www.youtube.com/watch?v=cl9m6O4Yt0Y&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=14
         https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/14_HD_Maps?ref_type=heads
 
-（10）carla 与 autoware.auto 联合仿真
+    Map Creation:
+        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/map-creation-howto.html
 
+    Map component design:
+        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/map/
 
+（10）autoware.auto vehicle
+    Vehicle Interface design:
+        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/vehicle/
+
+    Drivers:
+        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/autoware-drivers-design.html
+
+（11）carla 与 autoware.auto 联合仿真
+    CARLA simulator：
+        https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/digital-twin-simulation/carla-tutorial/
 
 
 
