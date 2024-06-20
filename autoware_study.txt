@@ -251,6 +251,11 @@ autoware官方学习仓库：
 
 第一篇：安装 autoware 
 
+autoware.auto github官方文档： 
+    https://autowarefoundation.github.io/autoware-documentation/main/
+
+    https://autowarefoundation.github.io/autoware-documentation/main/installation/autoware/source-installation/
+
 
 Autoware.Universe：如何在Carla 0.9.13上运行:
 https://www.bilibili.com/read/cv19814487/
@@ -273,19 +278,11 @@ Autoware.universe部署01：Ubuntu20.04安装Autoware.universe并与Awsim联调:
 https://blog.csdn.net/zardforever123/article/details/132029636
 
 
-    autoware.auto github官方文档： 
-        https://autowarefoundation.github.io/autoware-documentation/main/
-
-        https://autowarefoundation.github.io/autoware-documentation/main/installation/autoware/source-installation/
-    
-
-
-
-git clone https://github.com/autowarefoundation/autoware.git
 
 
 
 
+git clone https://github.com/autowarefoundation/autoware.universe.git ，出现如下错误：
 
 === src/universe/autoware.universe (git) ===
 Could not clone repository 'https://github.com/autowarefoundation/autoware.universe.git': Cloning into '.'...
@@ -295,18 +292,54 @@ fetch-pack: unexpected disconnect while reading sideband packet
 fatal: early EOF
 fatal: fetch-pack: invalid index-pack output
 
+请使用（虽然用ssh慢一点，但是会成功）：
+git clone git@github.com:autowarefoundation/autoware.universe.git
 
 
 
-https://github.com/autowarefoundation/autoware.universe.git
+colcon build  --packages-select tensorrt_yolox
+
+--- stderr: tensorrt_yolox
+CMake Warning (dev) in CMakeLists.txt:
+  Policy CMP0104 is not set: CMAKE_CUDA_ARCHITECTURES now detected for NVCC,
+  empty CUDA_ARCHITECTURES not allowed.  Run "cmake --help-policy CMP0104"
+  for policy details.  Use the cmake_policy command to set the policy and
+  suppress this warning.
+
+  CUDA_ARCHITECTURES is empty for target "tensorrt_yolox_gpu_preprocess".
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+/usr/include/c++/11/bits/std_function.h:435:145: error: parameter packs not expanded with ‘...’:
+  435 |         function(_Functor&& __f)
+      |                                                                                                                                                 ^
+/usr/include/c++/11/bits/std_function.h:435:145: note:         ‘_ArgTypes’
+/usr/include/c++/11/bits/std_function.h:530:146: error: parameter packs not expanded with ‘...’:
+  530 |         operator=(_Functor&& __f)
+      |                                                                                                                                                  ^
+/usr/include/c++/11/bits/std_function.h:530:146: note:         ‘_ArgTypes’
+CMake Error at tensorrt_yolox_gpu_preprocess_generated_preprocess.cu.o.Release.cmake:280 (message):
+  Error generating file
+  /home/ycao/ros2_ads/autoware/build/tensorrt_yolox/CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/src/./tensorrt_yolox_gpu_preprocess_generated_preprocess.cu.o
 
 
+gmake[2]: *** [CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/build.make:320: CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/src/tensorrt_yolox_gpu_preprocess_generated_preprocess.cu.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:172: CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2
+---
+Failed   <<< tensorrt_yolox [21.1s, exited with code 2]
 
 
+解决方式：
+    sudo apt install nvidia-cuda-toolkit
+    nvcc -V
 
+    echo 'export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}' >> ~/.bashrc
+    echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}' >> ~/.bashrc
+    source ~/.bashrc
 
-
-
+运行测试：
+https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/planning-simulation/
 
 
 
