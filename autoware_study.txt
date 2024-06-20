@@ -250,28 +250,55 @@ autoware官方学习仓库：
 
 
 第一篇：安装 autoware 
+
+
+Autoware.Universe：如何在Carla 0.9.13上运行:
+https://www.bilibili.com/read/cv19814487/
+
+CARLA - Autoware universe Tutorial 2:
+https://www.youtube.com/watch?v=dxwwNacez7o
+https://www.youtube.com/watch?v=dxwwNacez7o
+
+
+Unbuntu22.04基于ROS Humble源码安装autoware.universe:
+https://blog.csdn.net/yz2630570484/article/details/132902294
+
+ubuntu22.04 、x86_64 、RTX3060Ti安装ros2 Humble/Autoware.universe/Autoware Build GUI /AWSIM 模拟器:
+https://blog.csdn.net/z549812/article/details/135957669
+
+Autoware.universe部署03：与Carla（二进制版）联调:
+https://blog.csdn.net/zardforever123/article/details/132357436
+
+Autoware.universe部署01：Ubuntu20.04安装Autoware.universe并与Awsim联调:
+https://blog.csdn.net/zardforever123/article/details/132029636
+
+
     autoware.auto github官方文档： 
         https://autowarefoundation.github.io/autoware-documentation/main/
+
+        https://autowarefoundation.github.io/autoware-documentation/main/installation/autoware/source-installation/
     
+
+
 
 git clone https://github.com/autowarefoundation/autoware.git
 
 
-sudo apt install python3.10-venv
-
-./setup-dev-env.sh -y --download-artifacts docker
 
 
 
-./setup-dev-env.sh -y --no-nvidia --download-artifacts docker
+=== src/universe/autoware.universe (git) ===
+Could not clone repository 'https://github.com/autowarefoundation/autoware.universe.git': Cloning into '.'...
+error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)
+error: 4519 bytes of body are still expected
+fetch-pack: unexpected disconnect while reading sideband packet
+fatal: early EOF
+fatal: fetch-pack: invalid index-pack output
 
 
 
 
-
-
-
-
+https://github.com/autowarefoundation/autoware.universe.git
 
 
 
