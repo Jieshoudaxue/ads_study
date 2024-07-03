@@ -243,13 +243,47 @@ autoware官方学习仓库：
     总结2：第二部分讲解汽车功能安全和开发模式，指出遵守功能安全其实是保护车厂。
     
 
-    ------------------》》前三课准备输出三篇博客：
-    一是 autoware 引入，包括 autoware 101 + 智驾体系介绍 + 智驾架构介绍 + 开发环境搭建 + 开发模式介绍；
-    二是智驾安全介绍，包括 iso 26262 ，不同层次的安全要求，简单介绍单元测试覆盖率（gtest）和静态代码检查（autosar C++14）
-    三是智驾系统实时性介绍，包括内核实时，dds实时，节点开发实时。修复之前 dds 博客的误区
+    ------------------》》前三课准备输出四篇博客：
+    一是 autoware 引入，包括 autoware 101 + 智驾体系介绍 + 智驾架构介绍 + 开发模式介绍；
+    二是 autoware 环境搭建，和多种模式下的仿真 demo 演示
+    三是智驾安全介绍，包括 iso 26262 ，不同层次的安全要求，简单介绍单元测试覆盖率（gtest）和静态代码检查（autosar C++14）
+    四是智驾系统实时性介绍，包括内核实时，dds实时，节点开发实时。修复之前 dds 博客的误区
 
 
-第一篇：安装 autoware 
+第一篇：autoware 引入
+
+    
+
+
+2.2 智驾技术栈介绍，包括几种智驾开源框架介绍
+
+
+
+    Autonomous Driving Stacks：
+        https://www.youtube.com/watch?v=nTI4fnn2tuU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=5
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/05_Architectures?ref_type=heads
+
+    资料： 
+        ODD ODC DDT 概念介绍：https://blog.csdn.net/weixin_45475747/article/details/120052069
+
+
+
+    总结：总结式的讲解了 autoware 的算法技术栈，还有对整个智驾体系进行了讲解，以及智驾安全性的知识（也提到了软实时和硬实时）。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+第二篇：安装 autoware 
 
 autoware.auto github官方文档： 
     https://autowarefoundation.github.io/autoware-documentation/main/
@@ -369,24 +403,6 @@ https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-ho
 
 
 
-
-
-
-
-2.2 智驾技术栈介绍，包括几种智驾开源框架介绍
-
-
-
-    Autonomous Driving Stacks：
-        https://www.youtube.com/watch?v=nTI4fnn2tuU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=5
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/05_Architectures?ref_type=heads
-
-    资料： 
-        ODD ODC DDT 概念介绍：https://blog.csdn.net/weixin_45475747/article/details/120052069
-
-
-
-    总结：总结式的讲解了 autoware 的算法技术栈，还有对整个智驾体系进行了讲解，以及智驾安全性的知识（也提到了软实时和硬实时）。
 
 
 
