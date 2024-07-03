@@ -8,7 +8,7 @@
 （4）autoware 本身是一套完整的自动驾驶体系，包括传感器，感知，定制，规控，高清地图等等算法模块， 也能与 carla（支持ros） 和 LGsvl 两款仿真软件联合仿真，自身也有 AVP（代课泊车）和 cargo （机场物流小车）demo，可以说 autoware 既是理解自动驾驶知识最好的模板，也是锻炼实际工程能力的良好载体。
 
 1.2 和 1.3 确定范围和定义目标
-（1）跑通 autoware.auto 的几个 demo，理解智驾数据流。理解 autoware 各个算法模块的代码框架，能基本掌握原理和代码，并能初步对应起来，但不强求精通。
+（1）学习最新的 autoware.core/universe，跑通 autoware.universe 的几个 demo，理解智驾数据流。理解 autoware 各个算法模块的代码框架，能基本掌握原理和代码，并能初步对应起来，但不强求精通。
 （2）掌握 carla 和 lgsvl 仿真测试知识，会与 autoware 联合仿真。能在仿真环境下对算法进行调试，感受各个算法模块的差别。
 
 1.4 寻找资源
@@ -18,7 +18,7 @@
 autoware github官方主页：
     https://github.com/autowarefoundation/autoware
 
-autoware.auto github官方文档： 
+autoware github官方文档： 
     https://autowarefoundation.github.io/autoware-documentation/main/
 autoware 老的gitlab文档地址（2022年以后，autoware搬到github了）
     https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/
@@ -63,9 +63,52 @@ autoware官方学习仓库：
 国内的教学资料：
     【全新】自动驾驶框架Autoware源码解析与项目实战（天宇，autoware.ai，付费）：https://cvlife.net/p/t_pc/goods_pc_detail/goods_detail/course_2ZpeirG04cDayEqoY30IPztaBJZ
     Autoware全系列仿真操作指南（只讲解环境搭建，涉及三个版本的autoware，付费）：https://www.bilibili.com/cheese/play/ep487877?query_from=0&search_id=16955594302639449062&search_query=autoware&csource=common_hpsearch_null_null&spm_id_from=333.337.search-card.all.click 
+
+
+
+资料思路调整：我要学习的是 autoware.universe，因此不能以老的 autoware.auto 的视频资料为主，应该以 autoware.universe 的文档和代码资料为主
+    第一，核心资料就两个，一是 autoware.universe github：https://github.com/autowarefoundation/autoware ，二是 autoware doc：https://autowarefoundation.github.io/autoware-documentation/main/ 。
     
+    第二，次一点的资料：autoware.universe 视频：https://www.youtube.com/watch?v=xbLBJRSYybY&list=PLuCQPvHJs-PsdRduUGJxPq_FwF63FlB3a   
+    
+    第二，其他资料，主要是老版本 autoware 的资料：
+        youtube autoware.auto 的视频：https://www.youtube.com/playlist?list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr 
+        视频对应的文档：https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures?ref_type=heads 
+        
+        autoware.auto 老的文档：https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/
+        国内的翻译版：http://lib.uml.com.cn/ebook/Autoware.Auto/Autoware955.asp
+        autoware.auto框架介绍：https://fishros.org.cn/forum/topic/299/autoware-auto%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D
+        
+        国内 autoware.ai 总结资料：https://github.com/cyhasuka/Autoware-Manuals-Chinese?tab=readme-ov-file#jump4.0
+        国内 autoware.ai 卖课资料（可以借鉴目录）：https://cvlife.net/p/t_pc/goods_pc_detail/goods_detail/course_2ZpeirG04cDayEqoY30IPztaBJZ
+
+
+
     
 1.5和1.6 创建学习计划和筛选资料
+（1）autoware 引入，梳理资料，介绍 autoware 的昨天今天明天，确定要学习的版本（最新的 autoware.universe），介绍 autoware.universe 的架构
+
+
+
+
+
+
+
+------------------》》前三课准备输出四篇博客：
+一是 autoware 引入，包括 autoware 101 + 智驾体系介绍 + 智驾架构介绍 + 开发模式介绍；
+二是 autoware 环境搭建，和多种模式下的仿真 demo 演示
+三是智驾安全介绍，包括 iso 26262 ，不同层次的安全要求，简单介绍单元测试覆盖率（gtest）和静态代码检查（autosar C++14）
+四是智驾系统实时性介绍，包括内核实时，dds实时，节点开发实时。修复之前 dds 博客的误区
+
+
+
+
+
+
+
+
+
+
 
 （1）autoware.auto 环境搭建，框架梳理，demo 跑通（avp，cargo）
     Development Environment：
@@ -203,6 +246,10 @@ autoware官方学习仓库：
 
 2 第二部分--在各个知识模块循环往复
 
+
+
+
+
 2.1 autoware.auto 环境搭建，框架梳理，demo 跑通（avp，cargo）
     Development Environment：
         https://www.youtube.com/watch?v=XTmlhvlmcf8&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=1
@@ -211,68 +258,51 @@ autoware官方学习仓库：
         https://gitlab.com/ApexAI/autowareclass2020/-/blob/master/lectures/01_DevelopmentEnvironment/devenv.md?ref_type=heads
         https://gitlab.com/ApexAI/autowareclass2020/-/blob/master/lectures/01_DevelopmentEnvironment/devenv2.md?ref_type=heads
 
-    Autoware 101：
-        https://www.youtube.com/watch?v=eSHHmJrqpMU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=6
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/06_Autoware_101?ref_type=heads
 
-    autoware 的昨天今天明天：
-        https://autoware.org/past-present-and-the-future-of-autoware/
-        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/difference-from-ai-and-auto/
-
-    Autoware Universe Training ：
-        https://www.youtube.com/watch?v=xbLBJRSYybY&list=PLuCQPvHJs-PsdRduUGJxPq_FwF63FlB3a
-
-    autoware.auto框架介绍:
-        https://fishros.org.cn/forum/topic/299/autoware-auto%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D
-    Autoware 软件开发指南: 
-        https://github.com/cyhasuka/Autoware-Manuals-Chinese?tab=readme-ov-file#jump2.2
-    Autoware.Auto教程：
-        http://lib.uml.com.cn/ebook/Autoware.Auto/Autoware955.asp
-    Autoware.auto的安装、配置与测试（Docker版）:
-        https://www.guyuehome.com/37552
-
-    autoware github官方主页：
-        https://github.com/autowarefoundation/autoware
-    autoware.auto github官方文档： 
-        https://autowarefoundation.github.io/autoware-documentation/main/
-    autoware 老的gitlab文档地址（2022年以后，autoware搬到github了）
-        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/
 
     总结1：第一步部分主要为大家讲解这套课程的体系，以及预备要求，比如懂ros，c++，数学知识，智驾软件架构知识，要有个电脑能跑仿真等。演示了autoware的安装和开发环境搭建，demo跑通等，主要是基于docker。但是版本比较老，使用的是ubuntu18.04。
     
     总结2：第二部分讲解汽车功能安全和开发模式，指出遵守功能安全其实是保护车厂。
     
 
-    ------------------》》前三课准备输出四篇博客：
-    一是 autoware 引入，包括 autoware 101 + 智驾体系介绍 + 智驾架构介绍 + 开发模式介绍；
-    二是 autoware 环境搭建，和多种模式下的仿真 demo 演示
-    三是智驾安全介绍，包括 iso 26262 ，不同层次的安全要求，简单介绍单元测试覆盖率（gtest）和静态代码检查（autosar C++14）
-    四是智驾系统实时性介绍，包括内核实时，dds实时，节点开发实时。修复之前 dds 博客的误区
-
 
 第一篇：autoware 引入
+
+
+
+
+
+
+
+
+
+
+
+    Autoware 101：
+        https://www.youtube.com/watch?v=eSHHmJrqpMU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=6
+        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/06_Autoware_101?ref_type=heads
+
+
+
+    autoware 的昨天今天明天：
+        https://autoware.org/past-present-and-the-future-of-autoware/
+        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/difference-from-ai-and-auto/
 
     
 
 
-2.2 智驾技术栈介绍，包括几种智驾开源框架介绍
+    2.2 智驾技术栈介绍，包括几种智驾开源框架介绍
+
+        Autonomous Driving Stacks：
+            https://www.youtube.com/watch?v=nTI4fnn2tuU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=5
+            https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/05_Architectures?ref_type=heads
+
+        资料： 
+            ODD ODC DDT 概念介绍：https://blog.csdn.net/weixin_45475747/article/details/120052069
 
 
 
-    Autonomous Driving Stacks：
-        https://www.youtube.com/watch?v=nTI4fnn2tuU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=5
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/05_Architectures?ref_type=heads
-
-    资料： 
-        ODD ODC DDT 概念介绍：https://blog.csdn.net/weixin_45475747/article/details/120052069
-
-
-
-    总结：总结式的讲解了 autoware 的算法技术栈，还有对整个智驾体系进行了讲解，以及智驾安全性的知识（也提到了软实时和硬实时）。
-
-
-
-
+        总结：总结式的讲解了 autoware 的算法技术栈，还有对整个智驾体系进行了讲解，以及智驾安全性的知识（也提到了软实时和硬实时）。
 
 
 
