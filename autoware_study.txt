@@ -65,9 +65,12 @@ autoware官方学习仓库：
     Autoware全系列仿真操作指南（只讲解环境搭建，涉及三个版本的autoware，付费）：https://www.bilibili.com/cheese/play/ep487877?query_from=0&search_id=16955594302639449062&search_query=autoware&csource=common_hpsearch_null_null&spm_id_from=333.337.search-card.all.click 
 
 
-
 资料思路调整：我要学习的是 autoware.universe，因此不能以老的 autoware.auto 的视频资料为主，应该以 autoware.universe 的文档和代码资料为主
-    第一，核心资料就两个，一是 autoware.universe github：https://github.com/autowarefoundation/autoware ，二是 autoware doc：https://autowarefoundation.github.io/autoware-documentation/main/ 。
+    第一，核心资料四个，
+        一是 autoware.universe github：https://github.com/autowarefoundation/autoware 
+        二是 autoware doc：https://autowarefoundation.github.io/autoware-documentation/main/ 
+        三是 autoware.universe doc ： https://autowarefoundation.github.io/autoware.universe/main/ 
+        四是 autoware tools doc: https://autowarefoundation.github.io/autoware_tools/main/
     
     第二，次一点的资料：autoware.universe 视频：https://www.youtube.com/watch?v=xbLBJRSYybY&list=PLuCQPvHJs-PsdRduUGJxPq_FwF63FlB3a   
     
@@ -83,327 +86,209 @@ autoware官方学习仓库：
         国内 autoware.ai 卖课资料（可以借鉴目录）：https://cvlife.net/p/t_pc/goods_pc_detail/goods_detail/course_2ZpeirG04cDayEqoY30IPztaBJZ
 
 
-
     
 1.5和1.6 创建学习计划和筛选资料
-（1）autoware 引入，梳理资料，介绍 autoware 的昨天今天明天，确定要学习的版本（最新的 autoware.universe），介绍 autoware.universe 的架构
+（1）autoware 引入，智驾技术架构介绍，智驾安全性介绍，智驾实时性讨论
+    https://autowarefoundation.github.io/autoware-documentation/main/
+    https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/
+    https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/difference-from-ai-and-auto/
+    https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/
 
+（2）autoware.universe 源码安装和仿真测试
+    https://autowarefoundation.github.io/autoware-documentation/main/installation/
+    https://autowarefoundation.github.io/autoware-documentation/main/tutorials/
 
-
-
-
-
-
-------------------》》前三课准备输出四篇博客：
-一是 autoware 引入，包括 autoware 101 + 智驾体系介绍 + 智驾架构介绍 + 开发模式介绍；
-二是 autoware 环境搭建，和多种模式下的仿真 demo 演示
-三是智驾安全介绍，包括 iso 26262 ，不同层次的安全要求，简单介绍单元测试覆盖率（gtest）和静态代码检查（autosar C++14）
-四是智驾系统实时性介绍，包括内核实时，dds实时，节点开发实时。修复之前 dds 博客的误区
-
-
-
-
-
-
-
-
-
-
-
-（1）autoware.auto 环境搭建，框架梳理，demo 跑通（avp，cargo）
-    Development Environment：
-        https://www.youtube.com/watch?v=XTmlhvlmcf8&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=1
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/01_DevelopmentEnvironment?ref_type=heads
-
-    Autoware 101：
-        https://www.youtube.com/watch?v=eSHHmJrqpMU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=6
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/06_Autoware_101?ref_type=heads
-
-
-    Autoware Universe Training ：
-        https://www.youtube.com/watch?v=xbLBJRSYybY&list=PLuCQPvHJs-PsdRduUGJxPq_FwF63FlB3a
-
-    autoware.auto框架介绍:
-        https://fishros.org.cn/forum/topic/299/autoware-auto%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D
-    Autoware 软件开发指南: 
-        https://github.com/cyhasuka/Autoware-Manuals-Chinese?tab=readme-ov-file#jump2.2
-    Autoware.Auto教程：
-        http://lib.uml.com.cn/ebook/Autoware.Auto/Autoware955.asp
-    Autoware.auto的安装、配置与测试（Docker版）:
-        https://www.guyuehome.com/37552
-
-    autoware github官方主页：
-        https://github.com/autowarefoundation/autoware
-    autoware.auto github官方文档： 
-        https://autowarefoundation.github.io/autoware-documentation/main/
-    autoware 老的gitlab文档地址（2022年以后，autoware搬到github了）
-        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/
-
-（2）智驾技术栈介绍，包括几种智驾开源框架介绍
-    Autonomous Driving Stacks：
-        https://www.youtube.com/watch?v=nTI4fnn2tuU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=5
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/05_Architectures?ref_type=heads
-
-    资料： 
-        ODD ODC DDT 概念介绍：https://blog.csdn.net/weixin_45475747/article/details/120052069
-
-（3）智驾的基础平台介绍，包括： HW，RTOS，DDS
-    Platform HW, RTOS and DDS：
-        https://www.youtube.com/watch?v=IyycN6ldsIs&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=4
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/04_Platform?ref_type=heads
-
-
-
-（4）autoware.auto 感知，包括：lidar，camera，radar
-    Object Perception: LIDAR：
-        https://www.youtube.com/watch?v=xSGCpb24dhI&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=7
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/07_Object_Perception_LIDAR?ref_type=heads
-    Object Perception: CAMERA:
-        https://www.youtube.com/watch?v=OtjTa-meJ-E&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=8
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/08_Perception_Camera?ref_type=heads
-    Object Perception: RADAR:
-        https://www.youtube.com/watch?v=PcVIO-xoNv8&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=9
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/09_Perception_Radar?ref_type=heads
+（3）开发自己的 autoware.universe，并使用 awsim 进行仿真
+    https://autowarefoundation.github.io/autoware-documentation/main/how-to-guides/
+    https://tier4.github.io/AWSIM/
     
-    Perception：
-        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/autoware-perception-design.html
-    Fusion:
-        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/autoware-fusion-design.html
-    Prediction:    
-        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/autoware-prediction-design.html
-        
-    Perception Component Design：
-        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/perception/
-        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-interfaces/components/perception/
-    
+（4）autoware.universe 各模块的架构和接口设计：传感器，地图，定位，感知，规划，控制，车辆
+    https://autowarefoundation.github.io/autoware-documentation/main/design/
+    https://autowarefoundation.github.io/autoware.universe/main/ 
 
-    Autoware 软件开发指南: 
-        https://github.com/cyhasuka/Autoware-Manuals-Chinese?tab=readme-ov-file#jump2.2
 
-（5）autoware.auto 定位
-    State Estimation for Localization:
-        https://www.youtube.com/watch?v=g2YURb-d9vY&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=10
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/10_Localization?ref_type=heads
 
-    Localization：
-        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/autoware-localization-design.html
-    localization：
-        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/localization/
-
-    Autoware 软件开发指南: 
-        https://github.com/cyhasuka/Autoware-Manuals-Chinese?tab=readme-ov-file#jump2.2
-
-（6）lgsvl 与 autoware.auto 联合仿真
-    LGSVL Simulator:
-        https://www.youtube.com/watch?v=OcB6FUbjZXo&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=11
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/11_LGSVL_Simulator?ref_type=heads
-
-（7）autoware.auto 规控
-    Motion Control:
-        https://www.youtube.com/watch?v=fQJpAVRQBrI&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=12
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/12_Motion_Control?ref_type=heads
-
-    Planning:
-        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/autoware-planning-design.html
-    Control:
-        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/autoware-control-design.html
-    
-    Planning component design:
-        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/planning/
-    Control component design:
-        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/control/
-    
-    Autoware 软件开发指南: 
-        https://github.com/cyhasuka/Autoware-Manuals-Chinese?tab=readme-ov-file#jump2.2
-
-（8）autoware.auto 数据管理和分析
-    Data Storage and Analytics:
-        https://www.youtube.com/watch?v=vinP0zrnkyU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=13
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/13_MARV_Data_Analytics?ref_type=heads
-
-（9）autoware.auto 建图
-    HD Maps:
-        https://www.youtube.com/watch?v=cl9m6O4Yt0Y&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=14
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/14_HD_Maps?ref_type=heads
-
-    Map Creation:
-        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/map-creation-howto.html
-
-    Map component design:
-        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/map/
-
-（10）autoware.auto vehicle
-    Vehicle Interface design:
-        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/vehicle/
-
-    Drivers:
-        https://autowarefoundation.gitlab.io/autoware.auto/AutowareAuto/autoware-drivers-design.html
-
-（11）carla 与 autoware.auto 联合仿真
-    CARLA simulator：
-        https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/digital-twin-simulation/carla-tutorial/
 
 
 2 第二部分--在各个知识模块循环往复
 
+2.1 autoware 引入，智驾技术架构介绍，智驾安全性介绍，智驾实时性讨论
+
+    第一篇博客：autoware 引入，梳理资料，介绍 autoware 的昨天今天明天，确定要学习的版本（最新的 autoware.universe），介绍 autoware.universe 的架构，
+        https://autowarefoundation.github.io/autoware-documentation/main/
+
+        autoware 的昨天今天明天：
+            https://autoware.org/past-present-and-the-future-of-autoware/
+            https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/difference-from-ai-and-auto/
+
+        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/
+        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/
 
 
+        Autoware 101：
+            https://www.youtube.com/watch?v=eSHHmJrqpMU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=6
+            https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/06_Autoware_101?ref_type=heads
 
 
-2.1 autoware.auto 环境搭建，框架梳理，demo 跑通（avp，cargo）
-    Development Environment：
-        https://www.youtube.com/watch?v=XTmlhvlmcf8&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=1
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/01_DevelopmentEnvironment?ref_type=heads
-        
-        https://gitlab.com/ApexAI/autowareclass2020/-/blob/master/lectures/01_DevelopmentEnvironment/devenv.md?ref_type=heads
-        https://gitlab.com/ApexAI/autowareclass2020/-/blob/master/lectures/01_DevelopmentEnvironment/devenv2.md?ref_type=heads
+    第二篇博客，补充介绍智驾体系，开发模式，功能安全要求
 
-
-
-    总结1：第一步部分主要为大家讲解这套课程的体系，以及预备要求，比如懂ros，c++，数学知识，智驾软件架构知识，要有个电脑能跑仿真等。演示了autoware的安装和开发环境搭建，demo跑通等，主要是基于docker。但是版本比较老，使用的是ubuntu18.04。
-    
-    总结2：第二部分讲解汽车功能安全和开发模式，指出遵守功能安全其实是保护车厂。
-    
-
-
-第一篇：autoware 引入
-
-
-
-
-
-
-
-
-
-
-
-    Autoware 101：
-        https://www.youtube.com/watch?v=eSHHmJrqpMU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=6
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/06_Autoware_101?ref_type=heads
-
-
-
-    autoware 的昨天今天明天：
-        https://autoware.org/past-present-and-the-future-of-autoware/
-        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/difference-from-ai-and-auto/
-
-    
-
-
-    2.2 智驾技术栈介绍，包括几种智驾开源框架介绍
-
-        Autonomous Driving Stacks：
-            https://www.youtube.com/watch?v=nTI4fnn2tuU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=5
-            https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/05_Architectures?ref_type=heads
-
-        资料： 
-            ODD ODC DDT 概念介绍：https://blog.csdn.net/weixin_45475747/article/details/120052069
-
-
-
+        https://gitlab.com/ApexAI/autowareclass2020/-/blob/master/lectures/05_Architectures/Part_1.pdf?ref_type=heads
+        资料： ODD ODC DDT 概念介绍：https://blog.csdn.net/weixin_45475747/article/details/120052069
         总结：总结式的讲解了 autoware 的算法技术栈，还有对整个智驾体系进行了讲解，以及智驾安全性的知识（也提到了软实时和硬实时）。
 
+        https://gitlab.com/ApexAI/autowareclass2020/-/blob/master/lectures/01_DevelopmentEnvironment/devenv2.md?ref_type=heads
+        总结1：第二部分讲解汽车功能安全和开发模式，指出遵守功能安全其实是保护车厂。
 
 
+    第三篇博客，智驾系统实时性介绍，包括内核实时，dds实时，节点开发实时。修复之前 dds 博客的误区
+        https://gitlab.com/ApexAI/autowareclass2020/-/blob/master/lectures/04_Platform/ECUandRTOS.pdf?ref_type=heads
+        总结：第一课主要讲解了智驾汽车的电子软硬件，包括各种ECU，RTOS，特别强调了实时系统 real-time os，核心点是确定性（不要与高速混淆）：确定时间完成确定任务，有效控制最大延迟，os调度器主要采用 Pre-emptive（可抢占式）（补充：TSN交换机的核心也是抢占式包调度机制，确保传播延迟确定）。下面有个样例，可以尝试运行一下，感受实时系统和非实时系统的区别，了解如何把普通桌面linux改为实时系统（通过打RT_PREEMPT内核补丁）。另外，还提到了软实时和硬实时的概念，需要进一步了解。
 
 
+        
+        TODO1：测试并实现下面的钟摆样例，感受 real-time os 和 普通系统的区别，并总结实时系统的编程套路，出一篇智驾C++开发如何实现实时效果的博客，如果能结合 DDS 实现，效果最佳。
+            ros2 的实时性讨论以及实时系统的定义和实现方式：
+                https://docs.ros.org/en/humble/Tutorials/Demos/Real-Time-Programming.html
+                https://design.ros2.org/articles/realtime_background.html
+
+        TODO2：写完实时系统博客之后，对之前 ros2 dds的文章进行优化，之前的文章确实混淆了实时和高速的概念
+            ros2 DDS两篇：
+                https://blog.csdn.net/cy1641395022/article/details/135261069
+                https://blog.csdn.net/cy1641395022/article/details/136202639
 
 
+        RT_PREEMPT内核补丁介绍：
+            RT_PREEMPT 是 Linux 内核的一个变体，它通过一系列的补丁被实时化（real-time）了。这些补丁是为了减少内核中不可抢占的代码路径的数量和持续时间，使得内核能够以更可预测的方式来响应实时任务的需求。
+
+            在标准的 Linux 内核中，有很多执行路径是不可抢占的，尤其是在内核模式下。这意味着当内核正在处理某些事务时，无法被高优先级的任务打断。对于大多数桌面和服务器应用来说，这种设计是可接受的，因为它简化了内核设计，并且提供了足够的性能。
+
+            然而，在需要严格的实时性能的系统中，例如工业控制、机器人或者嵌入式设备，这些不可抢占的执行路径可能会导致无法接受的延迟。实时系统要求能够在非常短的、确定的时间内响应外部事件。RT_PREEMPT 补丁就是为了解决这个问题而产生的。
+
+            以下是 RT_PREEMPT 补丁所实现的主要特性：
+
+            抢占式内核: 允许内核代码（除了那些关键区段）被抢占。
+            高分辨率定时器: 支持更精确的定时功能。
+            优先级继承: 防止优先级反转的问题，即低优先级任务阻塞高优先级任务的执行。
+            改进的中断管理: 使得中断处理对实时性能的影响最小化。
+            改进的锁机制: 引入自旋锁替代品，如睡眠锁，减少等待锁时的CPU时间浪费。
+            使用 RT_PREEMPT 补丁的 Linux 内核通常被称为“实时内核”（Real-Time Kernel）。开发者可以从 kernel.org 或者实时补丁的维护者那里获取这些补丁，并将其应用到特定版本的内核源码中，以构建自己的实时内核。需要注意的是，实时内核可能需要更认真地考虑系统的调优和配置，以确保达到所需的实时性能标准。
+
+        
+        软实时和硬实时区别（简单概况为：桌面linux就是软实时，rtos，比如qnx，就是硬实时。软实时就是尽可能实时，实在不行也没事；硬实时是确定实时，由软硬件综合保证（调度策略等等））：
+            软实时操作系统 (Soft Real-time OS) 和 硬实时操作系统 (Hard Real-time OS) 的区别主要在于它们对于实时性能的保证程度。以下是两者之间一些关键的区别：
+
+            软实时操作系统 (Soft Real-time OS)
+            实时性目标: 在这种系统中，实时任务通常有较高的优先级，但并不保证一定能在严格的时间限制内完成。如果偶尔违反时间约束，系统仍然可接受，并不会导致灾难性后果。
+
+            应用场景: 适用于那些对时间敏感度较低的应用，比如多媒体播放、网络通信等。在这些应用中，偶尔的延迟或性能下降通常不会造成重大问题。
+
+            容错性: 相较于硬实时系统，软实时系统对任务执行的准时性要求不那么严格，因此具有更大的容错空间。
+
+            调度策略: 采用柔性的任务调度策略，可能包括动态优先级调整。即使某些实时任务延迟，系统也能继续运行而不会出现严重故障。
+
+            硬实时操作系统 (Hard Real-time OS)
+            实时性目标: 这类系统提供严格的时间保证。每个实时任务都必须在规定的时间截止前完成，否则可能导致系统功能故障甚至危及人身安全。
+
+            应用场景: 适用于高度依赖时间精度的关键性任务，如航空控制系统、工业自动化控制、医疗设备等。在这些领域，任何时间上的违规都可能产生不可预知的严重后果。
+
+            容错性: 几乎没有容错余地。系统设计必须确保所有实时任务在预定时间内完成。
+
+            调度策略: 通常采用固定的、可预测的任务调度机制，比如速率单调调度(Rate Monotonic Scheduling)和最早截止时间优先(Earliest Deadline First)。
+
+            总结来说，硬实时操作系统与软实时操作系统的主要区别在于对实时性的保证程度。硬实时系统需要严格遵循时间约束，而软实时系统可以在一定程度上容忍时间上的偏差。    
 
 
+2.2 autoware.universe 源码安装和仿真测试
 
-第二篇：安装 autoware 
 
-autoware.auto github官方文档： 
     https://autowarefoundation.github.io/autoware-documentation/main/
 
     https://autowarefoundation.github.io/autoware-documentation/main/installation/autoware/source-installation/
 
 
-Autoware.Universe：如何在Carla 0.9.13上运行:
-https://www.bilibili.com/read/cv19814487/
+    Autoware.Universe：如何在Carla 0.9.13上运行:
+    https://www.bilibili.com/read/cv19814487/
 
-CARLA - Autoware universe Tutorial 2:
-https://www.youtube.com/watch?v=dxwwNacez7o
-https://www.youtube.com/watch?v=dxwwNacez7o
+    CARLA - Autoware universe Tutorial 2:
+    https://www.youtube.com/watch?v=dxwwNacez7o
+    https://www.youtube.com/watch?v=dxwwNacez7o
 
 
-Unbuntu22.04基于ROS Humble源码安装autoware.universe:
-https://blog.csdn.net/yz2630570484/article/details/132902294
+    Unbuntu22.04基于ROS Humble源码安装autoware.universe:
+    https://blog.csdn.net/yz2630570484/article/details/132902294
 
-ubuntu22.04 、x86_64 、RTX3060Ti安装ros2 Humble/Autoware.universe/Autoware Build GUI /AWSIM 模拟器:
-https://blog.csdn.net/z549812/article/details/135957669
+    ubuntu22.04 、x86_64 、RTX3060Ti安装ros2 Humble/Autoware.universe/Autoware Build GUI /AWSIM 模拟器:
+    https://blog.csdn.net/z549812/article/details/135957669
 
-Autoware.universe部署03：与Carla（二进制版）联调:
-https://blog.csdn.net/zardforever123/article/details/132357436
+    Autoware.universe部署03：与Carla（二进制版）联调:
+    https://blog.csdn.net/zardforever123/article/details/132357436
 
-Autoware.universe部署01：Ubuntu20.04安装Autoware.universe并与Awsim联调:
-https://blog.csdn.net/zardforever123/article/details/132029636
+    Autoware.universe部署01：Ubuntu20.04安装Autoware.universe并与Awsim联调:
+    https://blog.csdn.net/zardforever123/article/details/132029636
 
 
 
 
 
 
-git clone https://github.com/autowarefoundation/autoware.universe.git ，出现如下错误：
+    git clone https://github.com/autowarefoundation/autoware.universe.git ，出现如下错误：
 
-=== src/universe/autoware.universe (git) ===
-Could not clone repository 'https://github.com/autowarefoundation/autoware.universe.git': Cloning into '.'...
-error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)
-error: 4519 bytes of body are still expected
-fetch-pack: unexpected disconnect while reading sideband packet
-fatal: early EOF
-fatal: fetch-pack: invalid index-pack output
+    === src/universe/autoware.universe (git) ===
+    Could not clone repository 'https://github.com/autowarefoundation/autoware.universe.git': Cloning into '.'...
+    error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)
+    error: 4519 bytes of body are still expected
+    fetch-pack: unexpected disconnect while reading sideband packet
+    fatal: early EOF
+    fatal: fetch-pack: invalid index-pack output
 
-请使用（虽然用ssh慢一点，但是会成功）：
-git clone git@github.com:autowarefoundation/autoware.universe.git
+    请使用（虽然用ssh慢一点，但是会成功）：
+    git clone git@github.com:autowarefoundation/autoware.universe.git
 
 
 
-colcon build  --packages-select tensorrt_yolox
+    colcon build  --packages-select tensorrt_yolox
 
---- stderr: tensorrt_yolox
-CMake Warning (dev) in CMakeLists.txt:
-  Policy CMP0104 is not set: CMAKE_CUDA_ARCHITECTURES now detected for NVCC,
-  empty CUDA_ARCHITECTURES not allowed.  Run "cmake --help-policy CMP0104"
-  for policy details.  Use the cmake_policy command to set the policy and
-  suppress this warning.
+    --- stderr: tensorrt_yolox
+    CMake Warning (dev) in CMakeLists.txt:
+      Policy CMP0104 is not set: CMAKE_CUDA_ARCHITECTURES now detected for NVCC,
+      empty CUDA_ARCHITECTURES not allowed.  Run "cmake --help-policy CMP0104"
+      for policy details.  Use the cmake_policy command to set the policy and
+      suppress this warning.
 
-  CUDA_ARCHITECTURES is empty for target "tensorrt_yolox_gpu_preprocess".
-This warning is for project developers.  Use -Wno-dev to suppress it.
+      CUDA_ARCHITECTURES is empty for target "tensorrt_yolox_gpu_preprocess".
+    This warning is for project developers.  Use -Wno-dev to suppress it.
 
-/usr/include/c++/11/bits/std_function.h:435:145: error: parameter packs not expanded with ‘...’:
-  435 |         function(_Functor&& __f)
-      |                                                                                                                                                 ^
-/usr/include/c++/11/bits/std_function.h:435:145: note:         ‘_ArgTypes’
-/usr/include/c++/11/bits/std_function.h:530:146: error: parameter packs not expanded with ‘...’:
-  530 |         operator=(_Functor&& __f)
-      |                                                                                                                                                  ^
-/usr/include/c++/11/bits/std_function.h:530:146: note:         ‘_ArgTypes’
-CMake Error at tensorrt_yolox_gpu_preprocess_generated_preprocess.cu.o.Release.cmake:280 (message):
-  Error generating file
-  /home/ycao/ros2_ads/autoware/build/tensorrt_yolox/CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/src/./tensorrt_yolox_gpu_preprocess_generated_preprocess.cu.o
+    /usr/include/c++/11/bits/std_function.h:435:145: error: parameter packs not expanded with ‘...’:
+      435 |         function(_Functor&& __f)
+          |                                                                                                                                                 ^
+    /usr/include/c++/11/bits/std_function.h:435:145: note:         ‘_ArgTypes’
+    /usr/include/c++/11/bits/std_function.h:530:146: error: parameter packs not expanded with ‘...’:
+      530 |         operator=(_Functor&& __f)
+          |                                                                                                                                                  ^
+    /usr/include/c++/11/bits/std_function.h:530:146: note:         ‘_ArgTypes’
+    CMake Error at tensorrt_yolox_gpu_preprocess_generated_preprocess.cu.o.Release.cmake:280 (message):
+      Error generating file
+      /home/ycao/ros2_ads/autoware/build/tensorrt_yolox/CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/src/./tensorrt_yolox_gpu_preprocess_generated_preprocess.cu.o
 
 
-gmake[2]: *** [CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/build.make:320: CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/src/tensorrt_yolox_gpu_preprocess_generated_preprocess.cu.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:172: CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/all] Error 2
-gmake[1]: *** Waiting for unfinished jobs....
-gmake: *** [Makefile:146: all] Error 2
----
-Failed   <<< tensorrt_yolox [21.1s, exited with code 2]
+    gmake[2]: *** [CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/build.make:320: CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/src/tensorrt_yolox_gpu_preprocess_generated_preprocess.cu.o] Error 1
+    gmake[1]: *** [CMakeFiles/Makefile2:172: CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/all] Error 2
+    gmake[1]: *** Waiting for unfinished jobs....
+    gmake: *** [Makefile:146: all] Error 2
+    ---
+    Failed   <<< tensorrt_yolox [21.1s, exited with code 2]
 
 
-解决方式：
-    sudo apt install nvidia-cuda-toolkit
-    nvcc -V
+    解决方式：
+        sudo apt install nvidia-cuda-toolkit
+        nvcc -V
 
-    echo 'export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}' >> ~/.bashrc
-    echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}' >> ~/.bashrc
-    source ~/.bashrc
+        echo 'export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}' >> ~/.bashrc
+        echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}' >> ~/.bashrc
+        source ~/.bashrc
 
-运行测试：
-https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/planning-simulation/
+    运行测试：
+    https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/planning-simulation/
 
 
 
@@ -446,76 +331,6 @@ https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-ho
 
 
 
-
-
-
-
-
-
-2.3 智驾的基础平台介绍，包括： HW，RTOS，DDS
-    Platform HW, RTOS and DDS：
-        https://www.youtube.com/watch?v=IyycN6ldsIs&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=4
-        https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/04_Platform?ref_type=heads
-
-
-
-
-    总结：第一课主要讲解了智驾汽车的电子软硬件，包括各种ECU，RTOS，特别强调了实时系统 real-time os，核心点是确定性（不要与高速混淆）：确定时间完成确定任务，有效控制最大延迟，os调度器主要采用 Pre-emptive（可抢占式）（补充：TSN交换机的核心也是抢占式包调度机制，确保传播延迟确定）。下面有个样例，可以尝试运行一下，感受实时系统和非实时系统的区别，了解如何把普通桌面linux改为实时系统（通过打RT_PREEMPT内核补丁）。另外，还提到了软实时和硬实时的概念，需要进一步了解。
-    
-    总结2：第二课讲解了 DDS 协议，DDS的设计思路，以及 DDS 和 ROS2 的婚姻，重点解释了 DDS 的 QOS 机制，并演示了一个非常简单的样例。
-
-    
-    TODO1：测试并实现下面的钟摆样例，感受 real-time os 和 普通系统的区别，并总结实时系统的编程套路，出一篇智驾C++开发如何实现实时效果的博客，如果能结合 DDS 实现，效果最佳。
-        ros2 的实时性讨论以及实时系统的定义和实现方式：
-            https://docs.ros.org/en/humble/Tutorials/Demos/Real-Time-Programming.html
-            https://design.ros2.org/articles/realtime_background.html
-
-    TODO2：写完实时系统博客之后，对之前 ros2 dds的文章进行优化，之前的文章确实混淆了实时和高速的概念
-        ros2 DDS两篇：
-            https://blog.csdn.net/cy1641395022/article/details/135261069
-            https://blog.csdn.net/cy1641395022/article/details/136202639
-
-
-
-    RT_PREEMPT内核补丁介绍：
-        RT_PREEMPT 是 Linux 内核的一个变体，它通过一系列的补丁被实时化（real-time）了。这些补丁是为了减少内核中不可抢占的代码路径的数量和持续时间，使得内核能够以更可预测的方式来响应实时任务的需求。
-
-        在标准的 Linux 内核中，有很多执行路径是不可抢占的，尤其是在内核模式下。这意味着当内核正在处理某些事务时，无法被高优先级的任务打断。对于大多数桌面和服务器应用来说，这种设计是可接受的，因为它简化了内核设计，并且提供了足够的性能。
-
-        然而，在需要严格的实时性能的系统中，例如工业控制、机器人或者嵌入式设备，这些不可抢占的执行路径可能会导致无法接受的延迟。实时系统要求能够在非常短的、确定的时间内响应外部事件。RT_PREEMPT 补丁就是为了解决这个问题而产生的。
-
-        以下是 RT_PREEMPT 补丁所实现的主要特性：
-
-        抢占式内核: 允许内核代码（除了那些关键区段）被抢占。
-        高分辨率定时器: 支持更精确的定时功能。
-        优先级继承: 防止优先级反转的问题，即低优先级任务阻塞高优先级任务的执行。
-        改进的中断管理: 使得中断处理对实时性能的影响最小化。
-        改进的锁机制: 引入自旋锁替代品，如睡眠锁，减少等待锁时的CPU时间浪费。
-        使用 RT_PREEMPT 补丁的 Linux 内核通常被称为“实时内核”（Real-Time Kernel）。开发者可以从 kernel.org 或者实时补丁的维护者那里获取这些补丁，并将其应用到特定版本的内核源码中，以构建自己的实时内核。需要注意的是，实时内核可能需要更认真地考虑系统的调优和配置，以确保达到所需的实时性能标准。
-
-    
-    软实时和硬实时区别（简单概况为：桌面linux就是软实时，rtos，比如qnx，就是硬实时。软实时就是尽可能实时，实在不行也没事；硬实时是确定实时，由软硬件综合保证（调度策略等等））：
-        软实时操作系统 (Soft Real-time OS) 和 硬实时操作系统 (Hard Real-time OS) 的区别主要在于它们对于实时性能的保证程度。以下是两者之间一些关键的区别：
-
-        软实时操作系统 (Soft Real-time OS)
-        实时性目标: 在这种系统中，实时任务通常有较高的优先级，但并不保证一定能在严格的时间限制内完成。如果偶尔违反时间约束，系统仍然可接受，并不会导致灾难性后果。
-
-        应用场景: 适用于那些对时间敏感度较低的应用，比如多媒体播放、网络通信等。在这些应用中，偶尔的延迟或性能下降通常不会造成重大问题。
-
-        容错性: 相较于硬实时系统，软实时系统对任务执行的准时性要求不那么严格，因此具有更大的容错空间。
-
-        调度策略: 采用柔性的任务调度策略，可能包括动态优先级调整。即使某些实时任务延迟，系统也能继续运行而不会出现严重故障。
-
-        硬实时操作系统 (Hard Real-time OS)
-        实时性目标: 这类系统提供严格的时间保证。每个实时任务都必须在规定的时间截止前完成，否则可能导致系统功能故障甚至危及人身安全。
-
-        应用场景: 适用于高度依赖时间精度的关键性任务，如航空控制系统、工业自动化控制、医疗设备等。在这些领域，任何时间上的违规都可能产生不可预知的严重后果。
-
-        容错性: 几乎没有容错余地。系统设计必须确保所有实时任务在预定时间内完成。
-
-        调度策略: 通常采用固定的、可预测的任务调度机制，比如速率单调调度(Rate Monotonic Scheduling)和最早截止时间优先(Earliest Deadline First)。
-
-        总结来说，硬实时操作系统与软实时操作系统的主要区别在于对实时性的保证程度。硬实时系统需要严格遵循时间约束，而软实时系统可以在一定程度上容忍时间上的偏差。    
 
 
 
