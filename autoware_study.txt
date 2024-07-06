@@ -68,6 +68,8 @@ autoware官方学习仓库：
 资料思路调整：我要学习的是 autoware.universe，因此不能以老的 autoware.auto 的视频资料为主，应该以 autoware.universe 的文档和代码资料为主
     第一，核心资料四个，
         一是 autoware.universe github：https://github.com/autowarefoundation/autoware 
+                                       https://github.com/autowarefoundation/autoware.core 
+                                       https://github.com/autowarefoundation/autoware.universe
         二是 autoware doc：https://autowarefoundation.github.io/autoware-documentation/main/ 
         三是 autoware.universe doc ： https://autowarefoundation.github.io/autoware.universe/main/ 
         四是 autoware tools doc: https://autowarefoundation.github.io/autoware_tools/main/
@@ -90,6 +92,7 @@ autoware官方学习仓库：
 1.5和1.6 创建学习计划和筛选资料
 （1）autoware 引入，智驾技术架构介绍，智驾安全性介绍，智驾实时性讨论
     https://autowarefoundation.github.io/autoware-documentation/main/
+    https://github.com/autowarefoundation/autoware 
     https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/
     https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/difference-from-ai-and-auto/
     https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/
@@ -104,30 +107,18 @@ autoware官方学习仓库：
     
 （4）autoware.universe 各模块的架构和接口设计：传感器，地图，定位，感知，规划，控制，车辆
     https://autowarefoundation.github.io/autoware-documentation/main/design/
+    https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/node-diagram/
     https://autowarefoundation.github.io/autoware.universe/main/ 
 
-
+    autoware.universe源码略读： https://blog.csdn.net/weixin_45432823/category_12681689.html
 
 
 
 2 第二部分--在各个知识模块循环往复
 
 2.1 autoware 引入，智驾技术架构介绍，智驾安全性介绍，智驾实时性讨论
-
-    第一篇博客：autoware 引入，梳理资料，介绍 autoware 的昨天今天明天，确定要学习的版本（最新的 autoware.universe），介绍 autoware.universe 的架构，
-        https://autowarefoundation.github.io/autoware-documentation/main/
-
-        autoware 的昨天今天明天：
-            https://autoware.org/past-present-and-the-future-of-autoware/
-            https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/difference-from-ai-and-auto/
-
-        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/
-        https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/
-
-
-        Autoware 101：
-            https://www.youtube.com/watch?v=eSHHmJrqpMU&list=PLL57Sz4fhxLpCXgN0lvCF7aHAlRA5FoFr&index=6
-            https://gitlab.com/ApexAI/autowareclass2020/-/tree/master/lectures/06_Autoware_101?ref_type=heads
+    第一篇博客：https://blog.csdn.net/cy1641395022/article/details/139936282
+        
 
 
     第二篇博客，补充介绍智驾体系，开发模式，功能安全要求
