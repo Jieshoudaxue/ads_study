@@ -127,25 +127,8 @@ autoware官方学习仓库：
 2 第二部分--在各个知识模块循环往复
 
 2.1 autoware 引入，智驾技术架构介绍，智驾安全性介绍，智驾实时性讨论
-    第一篇博客：https://blog.csdn.net/cy1641395022/article/details/139936282
-    第二篇博客：https://blog.csdn.net/cy1641395022/article/details/140232957
-
-
-
-    
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    第一篇：鸟瞰 autoware：https://blog.csdn.net/cy1641395022/article/details/139936282
+    第二篇，在 ubuntu22.04 + ros2 humble 安装 autoware.universe：https://blog.csdn.net/cy1641395022/article/details/140232957
 
 
     第三篇博客，补充介绍智驾体系，开发模式，功能安全要求
@@ -156,6 +139,15 @@ autoware官方学习仓库：
 
         https://gitlab.com/ApexAI/autowareclass2020/-/blob/master/lectures/01_DevelopmentEnvironment/devenv2.md?ref_type=heads
         总结1：第二部分讲解汽车功能安全和开发模式，指出遵守功能安全其实是保护车厂。
+
+
+    思路：从智驾整个技术栈入手，先分析主要的几个技术方向；然后讲解智驾的关键系统属性；最后过渡到功能安全（重点是把资料下下来，还有莱茵认证证书）；还有补充下autoware的软件工程，开发模式
+
+
+    之前的资料：F:\知识储备\功能安全
+
+
+
 
 
     第四篇博客，智驾系统实时性介绍，包括内核实时，dds实时，节点开发实时。修复之前 dds 博客的误区
