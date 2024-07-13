@@ -90,16 +90,26 @@ autoware官方学习仓库：
 
     
 1.5和1.6 创建学习计划和筛选资料
-（1）autoware 引入，智驾技术架构介绍，智驾安全性介绍，智驾实时性讨论
+（1）autoware 引入，智驾技术架构介绍，源码安装，智驾安全性介绍，智驾实时性讨论
     https://autowarefoundation.github.io/autoware-documentation/main/
     https://github.com/autowarefoundation/autoware 
     https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/
     https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-concepts/difference-from-ai-and-auto/
     https://autowarefoundation.github.io/autoware-documentation/main/design/autoware-architecture/
 
-（2）autoware.universe 源码安装和仿真测试
     https://autowarefoundation.github.io/autoware-documentation/main/installation/
+
+（2）autoware.universe 仿真测试
+
     https://autowarefoundation.github.io/autoware-documentation/main/tutorials/
+
+    Autoware.Universe：如何在Carla 0.9.13上运行:
+    https://www.bilibili.com/read/cv19814487/
+
+    CARLA - Autoware universe Tutorial 2:
+    https://www.youtube.com/watch?v=dxwwNacez7o
+    https://www.youtube.com/watch?v=dxwwNacez7o
+
 
 （3）开发自己的 autoware.universe，并使用 awsim 进行仿真
     https://autowarefoundation.github.io/autoware-documentation/main/how-to-guides/
@@ -117,11 +127,11 @@ autoware官方学习仓库：
 2 第二部分--在各个知识模块循环往复
 
 2.1 autoware 引入，智驾技术架构介绍，智驾安全性介绍，智驾实时性讨论
-    第一篇博客：https://blog.csdn.net/cy1641395022/article/details/139936282
-        
+    第一篇：鸟瞰 autoware：https://blog.csdn.net/cy1641395022/article/details/139936282
+    第二篇，在 ubuntu22.04 + ros2 humble 安装 autoware.universe：https://blog.csdn.net/cy1641395022/article/details/140232957
 
 
-    第二篇博客，补充介绍智驾体系，开发模式，功能安全要求
+    第三篇博客，补充介绍智驾体系，开发模式，功能安全要求
 
         https://gitlab.com/ApexAI/autowareclass2020/-/blob/master/lectures/05_Architectures/Part_1.pdf?ref_type=heads
         资料： ODD ODC DDT 概念介绍：https://blog.csdn.net/weixin_45475747/article/details/120052069
@@ -131,7 +141,16 @@ autoware官方学习仓库：
         总结1：第二部分讲解汽车功能安全和开发模式，指出遵守功能安全其实是保护车厂。
 
 
-    第三篇博客，智驾系统实时性介绍，包括内核实时，dds实时，节点开发实时。修复之前 dds 博客的误区
+    思路：从智驾整个技术栈入手，先分析主要的几个技术方向；然后讲解智驾的关键系统属性；最后过渡到功能安全（重点是把资料下下来，还有莱茵认证证书）；还有补充下autoware的软件工程，开发模式
+
+
+    之前的资料：F:\知识储备\功能安全
+
+
+
+
+
+    第四篇博客，智驾系统实时性介绍，包括内核实时，dds实时，节点开发实时。修复之前 dds 博客的误区
         https://gitlab.com/ApexAI/autowareclass2020/-/blob/master/lectures/04_Platform/ECUandRTOS.pdf?ref_type=heads
         总结：第一课主要讲解了智驾汽车的电子软硬件，包括各种ECU，RTOS，特别强调了实时系统 real-time os，核心点是确定性（不要与高速混淆）：确定时间完成确定任务，有效控制最大延迟，os调度器主要采用 Pre-emptive（可抢占式）（补充：TSN交换机的核心也是抢占式包调度机制，确保传播延迟确定）。下面有个样例，可以尝试运行一下，感受实时系统和非实时系统的区别，了解如何把普通桌面linux改为实时系统（通过打RT_PREEMPT内核补丁）。另外，还提到了软实时和硬实时的概念，需要进一步了解。
 
@@ -187,101 +206,6 @@ autoware官方学习仓库：
             调度策略: 通常采用固定的、可预测的任务调度机制，比如速率单调调度(Rate Monotonic Scheduling)和最早截止时间优先(Earliest Deadline First)。
 
             总结来说，硬实时操作系统与软实时操作系统的主要区别在于对实时性的保证程度。硬实时系统需要严格遵循时间约束，而软实时系统可以在一定程度上容忍时间上的偏差。    
-
-
-2.2 autoware.universe 源码安装和仿真测试
-
-
-    https://autowarefoundation.github.io/autoware-documentation/main/
-
-    https://autowarefoundation.github.io/autoware-documentation/main/installation/autoware/source-installation/
-
-
-    Autoware.Universe：如何在Carla 0.9.13上运行:
-    https://www.bilibili.com/read/cv19814487/
-
-    CARLA - Autoware universe Tutorial 2:
-    https://www.youtube.com/watch?v=dxwwNacez7o
-    https://www.youtube.com/watch?v=dxwwNacez7o
-
-
-    Unbuntu22.04基于ROS Humble源码安装autoware.universe:
-    https://blog.csdn.net/yz2630570484/article/details/132902294
-
-    ubuntu22.04 、x86_64 、RTX3060Ti安装ros2 Humble/Autoware.universe/Autoware Build GUI /AWSIM 模拟器:
-    https://blog.csdn.net/z549812/article/details/135957669
-
-    Autoware.universe部署03：与Carla（二进制版）联调:
-    https://blog.csdn.net/zardforever123/article/details/132357436
-
-    Autoware.universe部署01：Ubuntu20.04安装Autoware.universe并与Awsim联调:
-    https://blog.csdn.net/zardforever123/article/details/132029636
-
-
-
-
-
-
-    git clone https://github.com/autowarefoundation/autoware.universe.git ，出现如下错误：
-
-    === src/universe/autoware.universe (git) ===
-    Could not clone repository 'https://github.com/autowarefoundation/autoware.universe.git': Cloning into '.'...
-    error: RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)
-    error: 4519 bytes of body are still expected
-    fetch-pack: unexpected disconnect while reading sideband packet
-    fatal: early EOF
-    fatal: fetch-pack: invalid index-pack output
-
-    请使用（虽然用ssh慢一点，但是会成功）：
-    git clone git@github.com:autowarefoundation/autoware.universe.git
-
-
-
-    colcon build  --packages-select tensorrt_yolox
-
-    --- stderr: tensorrt_yolox
-    CMake Warning (dev) in CMakeLists.txt:
-      Policy CMP0104 is not set: CMAKE_CUDA_ARCHITECTURES now detected for NVCC,
-      empty CUDA_ARCHITECTURES not allowed.  Run "cmake --help-policy CMP0104"
-      for policy details.  Use the cmake_policy command to set the policy and
-      suppress this warning.
-
-      CUDA_ARCHITECTURES is empty for target "tensorrt_yolox_gpu_preprocess".
-    This warning is for project developers.  Use -Wno-dev to suppress it.
-
-    /usr/include/c++/11/bits/std_function.h:435:145: error: parameter packs not expanded with ‘...’:
-      435 |         function(_Functor&& __f)
-          |                                                                                                                                                 ^
-    /usr/include/c++/11/bits/std_function.h:435:145: note:         ‘_ArgTypes’
-    /usr/include/c++/11/bits/std_function.h:530:146: error: parameter packs not expanded with ‘...’:
-      530 |         operator=(_Functor&& __f)
-          |                                                                                                                                                  ^
-    /usr/include/c++/11/bits/std_function.h:530:146: note:         ‘_ArgTypes’
-    CMake Error at tensorrt_yolox_gpu_preprocess_generated_preprocess.cu.o.Release.cmake:280 (message):
-      Error generating file
-      /home/ycao/ros2_ads/autoware/build/tensorrt_yolox/CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/src/./tensorrt_yolox_gpu_preprocess_generated_preprocess.cu.o
-
-
-    gmake[2]: *** [CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/build.make:320: CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/src/tensorrt_yolox_gpu_preprocess_generated_preprocess.cu.o] Error 1
-    gmake[1]: *** [CMakeFiles/Makefile2:172: CMakeFiles/tensorrt_yolox_gpu_preprocess.dir/all] Error 2
-    gmake[1]: *** Waiting for unfinished jobs....
-    gmake: *** [Makefile:146: all] Error 2
-    ---
-    Failed   <<< tensorrt_yolox [21.1s, exited with code 2]
-
-
-    解决方式：
-        sudo apt install nvidia-cuda-toolkit
-        nvcc -V
-
-        echo 'export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}' >> ~/.bashrc
-        echo 'export LD_LIBRARY_PATH=/usr/local/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}' >> ~/.bashrc
-        source ~/.bashrc
-
-    运行测试：
-    https://autowarefoundation.github.io/autoware-documentation/main/tutorials/ad-hoc-simulation/planning-simulation/
-
-
 
 
 

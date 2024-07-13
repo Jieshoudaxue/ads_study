@@ -1,0 +1,75 @@
+ISO 26262是一个针对汽车行业中的功能安全标准。该标系基于IEC 61508标准，专门为了满足道路车辆电气和/或电子（E/E）系统的需要而设计。以下是ISO 26262标准的版本历史概述：
+
+ISO 26262:2011
+发布时间: 2011年11月
+内容: 这是ISO 26262标准首次发布的版本，它被分为十个部分，涵盖了管理功能安全、概念阶段、系统级、硬件级、软件级的要求，以及支持过程等方面。
+
+ISO 26262:2018 (第二版)
+发布时间: 2018年12月
+更新内容:
+    将适用范围从仅限乘用车扩展到包括摩托车、卡车、巴士等其他道路车辆。
+    更新并改进了方法和工作产品。
+    引入了适应新技术和概念的条款，例如自动驾驶和先进驾驶辅助系统(ADAS)。
+    增加了对电动车和混合动力车的考虑。
+结构: 标准扩展到了12部分，新增了两个部分：
+    Part 1: Vocabulary，术语和定义
+        此部分给出了整个标准使用的术语、定义和缩写词，确保所有后续部分中的术语都有统一的理解和应用。
+    
+    Part 2: Management of functional safety，管理功能安全
+        这一部分提供了如何在整个汽车开发生命周期中规划、实施、监控和改进功能安全管理体系的指南。
+    
+    Part 3: Concept phase，概念阶段
+        这里描述了项目早期的活动，包括风险评估（如危害分析和风险评估）以及确定安全目标和安全需求等。
+    
+    Part 4: Product development at the system level，产品开发：系统级
+        详细说明了开发安全相关的电气和/或电子系统时需要遵循的流程，包括系统设计、分析、验证和确认活动。
+    
+    Part 5: Product development at the hardware level，产品开发：硬件级
+        专注于硬件组件的安全生命周期，其中包含硬件的设计、实现和评估过程。
+    
+    Part 6: Product development at the software level，产品开发：软件级
+        说明了软件开发过程中的安全方面，包括软件架构、设计、实现、验证、测试和确认。
+    
+    Part 7: Production, operation, service and decommissioning，生产和运营
+        讨论了制造、操作、服务和最终报废阶段中功能安全的考量，确保在整个产品生命周期内维持必要的安全水平。
+    
+    Part 8: Supporting processes，支持过程
+        这一部分涉及到评估、验证、配置管理等多种支持过程，这些是完成主要安全生命周期活动所必需的。
+    
+    Part 9: Automotive safety integrity level(ASIL)-oriented and safety-oriented analyses，ASIL相关的安全分析
+        详细介绍了定性和定量的安全分析方法，如故障树分析（FTA）、失效模式与影响分析（FMEA），以及如何将其用于确定汽车安全完整性级别（ASIL）。
+    
+    Part 10: Guidelines on ISO 26262，指南
+        包含对整个ISO 26262标准的额外解读和例子，以帮助理解和实施这些标准。
+    
+    Part 11: Guidelines on application of ISO 26262 to semiconductors，ISO 26262应用到半导体上的指南
+        这一部分专门针对半导体产品的制造商和供应商，为他们在应用ISO 26262标准时提供具体的指导。
+    
+    Part 12: Adaptation of ISO 26262 for motorcycles，应用 ISO 26262 到摩托车
+        此部分是对ISO 26262标准的适配，专为摩托车及其子系统和组件的特殊性质而设。
+
+补充：截至最后知识更新点（2023年），ISO 26262:2018是最新版的ISO 26262标准。
+
+
+学习思路：
+    1. 熟悉整体框架和关键概念
+    阅读第1部分（Vocabulary）：首先了解标准中所使用的关键术语和定义。
+    审视第2部分（Management of functional safety）：这将帮助您理解如何管理功能安全，并为进一步的学习打下良好的管理基础。
+    浏览第10部分（Guideline on ISO 26262）：此部分提供对标准的额外解释和示例，有助于您更好地理解后续各部分的内容。
+
+    2. 根据职责与兴趣深入特定部分
+    不同的工作角色可能会关注标准的不同部分，比如：
+    系统工程师：可能需要重点理解第3部分（Concept phase）和第4部分（Product development at the system level）。
+    硬件工程师：应该深入第5部分（Product development at the hardware level）。
+    软件工程师：需要详细学习第6部分（Product development at the software level）。
+    质量与安全经理：应当掌握第2部分（Management of functional safety）和第9部分（ASIL-oriented and safety analyses）。
+
+
+
+
+
+
+
+
+
+
