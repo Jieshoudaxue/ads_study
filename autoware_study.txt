@@ -129,28 +129,14 @@ autoware官方学习仓库：
 2.1 autoware 引入，智驾技术架构介绍，智驾安全性介绍，智驾实时性讨论
     第一篇：鸟瞰 autoware：https://blog.csdn.net/cy1641395022/article/details/139936282
     第二篇，在 ubuntu22.04 + ros2 humble 安装 autoware.universe：https://blog.csdn.net/cy1641395022/article/details/140232957
-
-
-    第三篇博客，补充介绍智驾体系，开发模式，功能安全要求
-
-        https://gitlab.com/ApexAI/autowareclass2020/-/blob/master/lectures/05_Architectures/Part_1.pdf?ref_type=heads
-        资料： ODD ODC DDT 概念介绍：https://blog.csdn.net/weixin_45475747/article/details/120052069
-        总结：总结式的讲解了 autoware 的算法技术栈，还有对整个智驾体系进行了讲解，以及智驾安全性的知识（也提到了软实时和硬实时）。
-
-        https://gitlab.com/ApexAI/autowareclass2020/-/blob/master/lectures/01_DevelopmentEnvironment/devenv2.md?ref_type=heads
-        总结1：第二部分讲解汽车功能安全和开发模式，指出遵守功能安全其实是保护车厂。
-
-
-    思路：从智驾整个技术栈入手，先分析主要的几个技术方向；然后讲解智驾的关键系统属性；最后过渡到功能安全（重点是把资料下下来，还有莱茵认证证书）；还有补充下autoware的软件工程，开发模式
-
-
-    之前的资料：F:\知识储备\功能安全
+    第三篇，智驾技术务虚会之智驾技术栈讨论：https://blog.csdn.net/cy1641395022/article/details/140278524
+    第四篇，智驾技术务虚会之智驾安全性讨论：https://blog.csdn.net/cy1641395022/article/details/140332393
 
 
 
 
 
-    第四篇博客，智驾系统实时性介绍，包括内核实时，dds实时，节点开发实时。修复之前 dds 博客的误区
+    第五篇博客，智驾系统实时性介绍，包括内核实时，dds实时，节点开发实时。修复之前 dds 博客的误区
         https://gitlab.com/ApexAI/autowareclass2020/-/blob/master/lectures/04_Platform/ECUandRTOS.pdf?ref_type=heads
         总结：第一课主要讲解了智驾汽车的电子软硬件，包括各种ECU，RTOS，特别强调了实时系统 real-time os，核心点是确定性（不要与高速混淆）：确定时间完成确定任务，有效控制最大延迟，os调度器主要采用 Pre-emptive（可抢占式）（补充：TSN交换机的核心也是抢占式包调度机制，确保传播延迟确定）。下面有个样例，可以尝试运行一下，感受实时系统和非实时系统的区别，了解如何把普通桌面linux改为实时系统（通过打RT_PREEMPT内核补丁）。另外，还提到了软实时和硬实时的概念，需要进一步了解。
 
