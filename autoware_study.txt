@@ -140,7 +140,6 @@ autoware官方学习仓库：
         https://gitlab.com/ApexAI/autowareclass2020/-/blob/master/lectures/04_Platform/ECUandRTOS.pdf?ref_type=heads
         总结：第一课主要讲解了智驾汽车的电子软硬件，包括各种ECU，RTOS，特别强调了实时系统 real-time os，核心点是确定性（不要与高速混淆）：确定时间完成确定任务，有效控制最大延迟，os调度器主要采用 Pre-emptive（可抢占式）（补充：TSN交换机的核心也是抢占式包调度机制，确保传播延迟确定）。下面有个样例，可以尝试运行一下，感受实时系统和非实时系统的区别，了解如何把普通桌面linux改为实时系统（通过打RT_PREEMPT内核补丁）。另外，还提到了软实时和硬实时的概念，需要进一步了解。
 
-
         
         TODO1：测试并实现下面的钟摆样例，感受 real-time os 和 普通系统的区别，并总结实时系统的编程套路，出一篇智驾C++开发如何实现实时效果的博客，如果能结合 DDS 实现，效果最佳。
             ros2 的实时性讨论以及实时系统的定义和实现方式：
@@ -151,6 +150,88 @@ autoware官方学习仓库：
             ros2 DDS两篇：
                 https://blog.csdn.net/cy1641395022/article/details/135261069
                 https://blog.csdn.net/cy1641395022/article/details/136202639
+
+            
+            
+            
+            
+            
+        ros2 原生倒立摆及其用法：
+            https://github.com/ros2/demos/tree/master/pendulum_control
+            https://docs.ros.org/en/humble/Tutorials/Demos/Real-Time-Programming.html
+
+
+
+        倒摆演示：https://www.youtube.com/watch?v=MWJHcI7UcuE
+
+        倒立摆：
+            一级倒立摆控制 —— ROS2 仿真：
+            https://blog.csdn.net/ZhangRelay/article/details/103688353        
+            https://blog.csdn.net/weixin_46300916/article/details/133949315
+            
+            一级倒立摆控制 —— PID 控制器设计及 MATLAB 实现：
+            https://blog.csdn.net/weixin_46300916/article/details/133877366
+            
+            https://github.com/ros2-realtime-demo/pendulum.git
+            https://github.com/Jieshoudaxue/pendulum/blob/rolling/docs/tutorial.md
+            
+            https://github.com/Jieshoudaxue/pendulum/blob/rolling/docs/design.md
+            https://design.ros2.org/articles/node_lifecycle.html
+            
+            下面两篇是同一作者，主题也一样，只是一个是文章，另一个是ppt（应对照学习）：
+            https://design.ros2.org/articles/realtime_background.html
+            E:\智能汽车学习\ads_study\ads doc\RealtimeROS2
+            
+            https://www.ni.com/zh-cn/shop/data-acquisition-and-control/add-ons-for-data-acquisition-and-control/what-is-labview-real-time-module/what-is-a-real-time-operating-system--rtos--.html
+            https://en.wikipedia.org/wiki/Full_state_feedback
+
+            编译命令：
+            colcon build --packages-select pendulum pendulum2_msgs pendulum_utils pendulum_controller pendulum_driver pendulum_state_publisher pendulum_demo pendulum_bringup
+
+            运行倒立摆（rviz可视化查看）：
+            source install/local_setup.bash
+            ros2 launch pendulum_bringup pendulum_bringup.launch.py rviz:=True
+
+            移动小车：
+            ros2 topic pub -1 /teleop pendulum2_msgs/msg/PendulumTeleop "cart_position: 5.0"
+            
+            
+            ros2 run topic_tools relay /parameter_events /parameter_events_fake
+
+
+
+            编译踩坑1：
+            ycao@ycao:~/ros2_ads/code_space$ colcon build --packages-select pendulum_driver
+            Starting >>> pendulum_driver
+            --- stderr: pendulum_driver
+            CMake Error at CMakeLists.txt:59 (find_package):
+              By not providing "Findapex_test_tools.cmake" in CMAKE_MODULE_PATH this
+              project has asked CMake to find a package configuration file provided by
+              "apex_test_tools", but CMake did not find one.
+
+              Could not find a package configuration file provided by "apex_test_tools"
+              with any of the following names:
+
+                apex_test_toolsConfig.cmake
+                apex_test_tools-config.cmake
+
+              Add the installation prefix of "apex_test_tools" to CMAKE_PREFIX_PATH or
+              set "apex_test_tools_DIR" to a directory containing one of the above files.
+              If "apex_test_tools" provides a separate development package or SDK, be
+              sure it has been installed.
+
+
+            ---
+            Failed   <<< pendulum_driver [0.53s, exited with code 1]
+
+            解决：缺少 apex_test_tools 包，可以使用 rosdep 统一安装 pendulum 的所有依赖
+            # rosdep 工具，它是ROS的一个强大命令行工具，用于帮助安装软件包的依赖项
+            rosdep install -q -y --from-paths src --ignore-src --rosdistro humble
+
+
+
+
+
 
 
         RT_PREEMPT内核补丁介绍：
