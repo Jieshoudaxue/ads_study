@@ -134,35 +134,35 @@ autoware官方学习仓库：
     第五篇：智驾实时性讨论：https://blog.csdn.net/cy1641395022/article/details/140539669
 
 
+    Ros2 实时性编程实践系列 -- 倒立摆 Pendulum
 
-    第六篇：实时性编程样例之倒立摆
+
+
+        Ros2 实时性编程实践第一章 -- 倒立摆演示和数学原理分析
             
-        ros2 原生倒立摆及其用法：
-            https://github.com/ros2/demos/tree/master/pendulum_control
-            https://docs.ros.org/en/humble/Tutorials/Demos/Real-Time-Programming.html
+        倒立摆数学原理
+        https://blog.csdn.net/qq_41342525/article/details/106193258
+        
+        
+        https://blog.csdn.net/weixin_46300916/article/details/133949315
 
-            ros2 程序可以使用 rttest 包，以侵入式的方式，测例代码中实时任务的抖动情况，这里就是样例
+        一级倒立摆控制 —— PID 控制器设计及 MATLAB 实现：
+        https://blog.csdn.net/weixin_46300916/article/details/133877366
 
-        倒摆演示：https://www.youtube.com/watch?v=MWJHcI7UcuE
+        倒摆演示：
+        https://www.youtube.com/watch?v=MWJHcI7UcuE
 
         倒立摆：
             一级倒立摆控制 —— ROS2 仿真：
             https://blog.csdn.net/ZhangRelay/article/details/103688353        
-            https://blog.csdn.net/weixin_46300916/article/details/133949315
+
             
-            一级倒立摆控制 —— PID 控制器设计及 MATLAB 实现：
-            https://blog.csdn.net/weixin_46300916/article/details/133877366
+
             
             https://github.com/ros2-realtime-demo/pendulum.git
             https://github.com/Jieshoudaxue/pendulum/blob/rolling/docs/tutorial.md
             
             https://github.com/Jieshoudaxue/pendulum/blob/rolling/docs/design.md
-            https://design.ros2.org/articles/node_lifecycle.html
-            
-            https://en.wikipedia.org/wiki/Full_state_feedback
-
-
-
 
 
             编译命令：
@@ -176,8 +176,7 @@ autoware官方学习仓库：
             ros2 topic pub -1 /teleop pendulum2_msgs/msg/PendulumTeleop "cart_position: 5.0"
             
             
-            ros2 run topic_tools relay /parameter_events /parameter_events_fake
-
+            
 
 
             编译踩坑1：
@@ -218,4 +217,97 @@ autoware官方学习仓库：
 
 
 
+
+        Ros2 实时性编程实践第二章 -- ros2 lifecycle node
+            https://github.com/ros2/demos/tree/master/lifecycle
+
+            ROS 2的lifecycle node是一种节点，它实现了一个预定义的状态机（state machine），管理节点从创建到销毁期间的不同状态。这使得开发者能够更好地控制节点的生命周期，并对节点进行更细粒度的管理，特别是对于需要长时间运行并且需要高可靠性的复杂系统而言。
+
+                Lifecycle node基于ROS 2 services提供了一系列的状态转换：
+
+                Unconfigured: 这是节点刚被构造出来时的初始状态。
+
+                Inactive: 当节点已经被初始化并准备好待命时的状态。在该状态下，节点不会参与任何计算或者发布/订阅操作。
+
+                Active: 在此状态下，节点处于完全活动状态，可以进行常规工作，如处理数据和响应请求。
+
+                Finalized: 节点完成所有工作并做好关闭准备的状态。此状态通常在节点即将关闭时进入。
+
+            除了上述主要状态，还有一些过渡状态，用于状态之间的转换：
+
+                Configuring: 当节点从Unconfigured状态过渡到Inactive状态时的状态。
+
+                CleaningUp: 当节点从Active状态回退到Inactive状态时的状态。
+
+                ShuttingDown: 当节点由任何状态转向Finalized状态时的过渡状态。
+
+                Activating: 当节点从Inactive状态变为Active状态时的状态。
+
+                Deactivating: 当节点从Active状态变为Inactive状态时的状态。
+
+            Lifecycle node允许开发者在每个转换点插入自定义逻辑，例如在激活前后初始化或清理资源。这种机制非常适合监视和管理那些需要精确控制如何以及何时启动和停止的节点。
+
+            一个简单的例子是，如果你有一个传感器节点，它需要在开始发布数据前先进行自检。你可以在Configuring状态执行自检，在Inactive状态等待激活信号，然后在Activating状态真正开始发布数据。
+
+            使用lifecycle node提供了比传统ROS节点更多的控制和灵活性，对于需要精细管理的应用场景十分有用。
+       
+       
+
+            lifecycle demo：
+            colcon build --packages-select lifecycle
+            source install/local_setup.bash
+            ros2 launch lifecycle lifecycle_demo_launch.py
+            
+
+
+
+            lifecycle优点：
+            https://design.ros2.org/articles/node_lifecycle.html
+            明确分离实时代码路径
+            对ROS网络有更大的控制
+                帮助确保正确的启动顺序
+                在线节点重启/替换
+            更好的监控和监管
+                标准生命周期 → 标准工具
+
+            ros2 pkg create --build-type ament_cmake --license Apache-2.0 lifecycle_demo --dependencies lifecycle_msgs rclcpp rclcpp_lifecycle std_msgs
+                
+                
+            cd lifecycle_demo
+            touch src/lifecycle_talker.cpp src/lifecycle_listener.cpp
+
+            mkdir launch
+            touch launch/lifecycle_demo_launch.py 
+                
+            colcon build --packages-select lifecycle_demo
+                
+                
+            source install/local_setup.bash
+            ros2 launch lifecycle_demo lifecycle_demo_launch.py
+
+
+
+
+
+    
+        Ros2 实时性编程实践第三章 -- 深入分析倒立摆样例
+    
+            https://github.com/ros2-realtime-demo/pendulum.git
+            https://github.com/Jieshoudaxue/pendulum/blob/rolling/docs/tutorial.md
+            
+            https://github.com/Jieshoudaxue/pendulum/blob/rolling/docs/design.md
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
