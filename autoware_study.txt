@@ -138,54 +138,59 @@ autoware官方学习仓库：
         第一篇：倒立摆引入与 ros2 pendulum 仿真：https://blog.csdn.net/cy1641395022/article/details/140707899
         第二篇：ros2 lifecycle node：https://blog.csdn.net/cy1641395022/article/details/140707833
         第三篇：PID 控制原理与编码实现：https://blog.csdn.net/cy1641395022/article/details/140708028
-
-
-第四篇：倒立摆数学原理分析
-
-
-
-https://blog.csdn.net/qq_42731705/article/details/122464642
-
-
-
-https://blog.csdn.net/Cui_Hongwei/article/details/109771622
-https://zhuanlan.zhihu.com/p/146769901
-
-
-https://en.wikipedia.org/wiki/Inverted_pendulum
-https://zhuanlan.zhihu.com/p/54071212
-
-
-
-https://www.instructables.com/Inverted-Pendulum-Control-Theory-and-Dynamics/
-
-
-采用matlab 模拟倒立摆控制的思路：
-第一，通过牛顿定律+微积分推导出力与摆角和位移的动力学方程
-第二，通过拉普拉斯变换得到力与摆角，力与位移的传递函数
-第三，matlab可以直接使用拉普拉斯变换后的传递函数作为倒立摆模型函数，输入力，就能算出来摆角和位移
-第四，在matlab中添加两个pid控制（一个也行），一个pid输入是摆角，输出是力；另一个pid输入是位移，输出是力
-第五，通过神奇调参，可以得到摆角和位移的控制曲线
-
-
-采用 ros2 仿真倒立摆控制的思路：
-第一，通过牛顿定律+微积分推导出力与摆角和位移的动力学方程，这个方程作为倒立摆的模型函数
-第二，添加综合pid控制，控制摆角的pid和控制位移的pid合并一块，添加一个权重，相当于输入是摆角和位移，输出是力
-第三，力发给模型函数，计算出摆角和位移（怎么算是个技巧？），摆角和位移发给综合pid控制器得到力
-第四，通过神奇调参，得到稳定控制的倒立摆
-
-
-针对第三条，需要研究那个样例，或者先拉普拉斯变换然后反变换？？？？？
-
-
+        第四篇：倒立摆数学原理分析：https://blog.csdn.net/cy1641395022/article/details/140707955
     
 第五篇 -- 基于 ros2 重新实现倒立摆仿真
 
-        
     
+    mkdir -p ~/colcon_ws/src
+cd ~/colcon_ws/src
+git clone https://github.com/Jieshoudaxue/pendulum.git -b rolling
+cd ~/colcon_ws
+colcon build --packages-select pendulum pendulum2_msgs pendulum_utils pendulum_controller pendulum_driver pendulum_state_publisher pendulum_demo pendulum_bringup
+
     
-    
-    
-    
-    
+ros2 launch pendulum_bringup pendulum_bringup.launch.py rviz:=True
+
+
+
+
+
+cd ~/colcon_ws/src
+ros2 pkg create --build-type ament_cmake  --license Apache-2.0 diy_interface
+cd diy_interface
+mkdir msg
+touch msg/Student.msg msg/Sphere.msg
+
+
+
+
+  <depend>geometry_msgs</depend>
+  // 定义 msg , 这三个是刚需
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
