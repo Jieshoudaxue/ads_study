@@ -142,8 +142,23 @@ autoware官方学习仓库：
     
 第五篇 -- 基于 ros2 重新实现倒立摆仿真
 
+
+ros2 倒立摆：https://blog.csdn.net/cy1641395022/article/details/140707899
     
-    mkdir -p ~/colcon_ws/src
+    
+    
+思路：把之前ros2 的博客过一遍，回忆下ros2编程
+    
+    
+思路更新：先原样抄一遍    
+    
+    
+思路：写新的样例之前，先找找之前的博客，找一个基础demo作为起点
+    
+    
+    
+    
+mkdir -p ~/colcon_ws/src
 cd ~/colcon_ws/src
 git clone https://github.com/Jieshoudaxue/pendulum.git -b rolling
 cd ~/colcon_ws
@@ -156,32 +171,33 @@ ros2 launch pendulum_bringup pendulum_bringup.launch.py rviz:=True
 
 
 
-cd ~/colcon_ws/src
-ros2 pkg create --build-type ament_cmake  --license Apache-2.0 diy_interface
-cd diy_interface
-mkdir msg
-touch msg/Student.msg msg/Sphere.msg
 
 
 
+ros2 pkg create --build-type ament_cmake  --license Apache-2.0 pendulum_msg
 
-  <depend>geometry_msgs</depend>
-  // 定义 msg , 这三个是刚需
-  <buildtool_depend>rosidl_default_generators</buildtool_depend>
-  <exec_depend>rosidl_default_runtime</exec_depend>
-  <member_of_group>rosidl_interface_packages</member_of_group>
+ros2 pkg create --build-type ament_cmake --license Apache-2.0 pendulum_driver
+ros2 pkg create --build-type ament_cmake --license Apache-2.0 pendulum_controller
 
 
 
 
 
 
+cd /home/ycao/ros2_ads/code_space
+colcon build --packages-select pendulum_driver pendulum_msg
+
+ros2 run pendulum_driver pendulum_driver_node
 
 
+TODO（时间待定）：研究 Runge Kutta 求解微分方程的原理，并利用 Runge Kutta 求解简化后的倒立摆动力学方程
+// Runge Kutta method: 
+// https://www.cnblogs.com/neoLin/p/10999688.html
+// https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods
 
+简化后的倒立摆动力学方程：https://blog.csdn.net/cy1641395022/article/details/140707955
 
-
-
+补充：简化后的倒立摆动力学方程有两个等式，其中力 F 和摆杆角 φ 是已知量，F 是controller 发出来的，角度 φ  是上一次迭代存下来的，那么其余两个变量：小车加速度和摆杆角加速度，就可以算出来。再加上初始状态值，就可以得到下一步的摆杆角度和小车位置，我理解这就是解微分方程。控制器拿到返回的状态值，根据 PID 算法输出新的力 F ，那么
 
 
 
