@@ -191,22 +191,28 @@ ros2 run pendulum_driver pendulum_driver_node
 
 
 TODO（时间待定）：研究 Runge Kutta 求解微分方程的原理，并利用 Runge Kutta 求解简化后的倒立摆动力学方程
+简化后的倒立摆动力学方程：https://blog.csdn.net/cy1641395022/article/details/140707955
 // Runge Kutta method: 
 // https://www.cnblogs.com/neoLin/p/10999688.html
 // https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods
 
-简化后的倒立摆动力学方程：https://blog.csdn.net/cy1641395022/article/details/140707955
-
-补充：简化后的倒立摆动力学方程有两个等式，其中力 F 和摆杆角 φ 是已知量，F 是controller 发出来的，角度 φ  是上一次迭代存下来的，那么其余两个变量：小车加速度和摆杆角加速度，就可以算出来。再加上初始状态值，就可以得到下一步的摆杆角度和小车位置，我理解这就是解微分方程。控制器拿到返回的状态值，根据 PID 算法输出新的力 F ，那么
 
 
+review后的思路：
+    第一，一阶常微分方程，指的是类似dy/dx = f(x, y)，方程的解是一个方程，而不是数，即y = f(x)，给出一个x，可得到对应的y值。
+    第二，二阶常微分方程，指的是类似 y'' = f(x, y, y')，方程的解是y = f(x)。
+    第三，倒立摆的动力学方程可以转化为两个二阶常微分方程，即：
+            小车加速度： x'' = f(t, x, x')
+            摆杆角加速度：φ'' = f(t, φ, φ')
+        四阶Runge-Kutta方法通常用于求解一阶常微分方程，如果用于求解二阶常微分方程，则把二阶转为两个一阶，最终会得到下面四个输出值，即：
+            小车速度: x' = v
+            小车加速度：x'' = f(t, x, x')
+            摆杆角速度：φ' = w
+            摆杆角加速度：φ'' = f(t, φ, φ')
+    第一，整个倒立摆样例的思路是，控制器发出水平力作为倒立摆的唯一输入；驱动器接受力，根据动力学方程，求得下一时刻小车位置，速度，摆杆角度，角速度（因为他们都是时间的函数），求得的方法就是用四阶Runge-Kutta的方法求解两个二阶常微分方程，最终可得到四个输出值，作为倒立摆的状态值，反馈给控制器
 
 
 
 
-
-
-
-
-
+echo "alias clean_colcon='rm -rf build/ install/ log/'" >> ~/.bashrc
 
