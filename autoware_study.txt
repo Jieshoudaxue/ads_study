@@ -155,7 +155,10 @@ ros2 倒立摆：https://blog.csdn.net/cy1641395022/article/details/140707899
     
 思路：写新的样例之前，先找找之前的博客，找一个基础demo作为起点
     
-    
+
+
+
+
     
     
 mkdir -p ~/colcon_ws/src
@@ -170,24 +173,33 @@ ros2 launch pendulum_bringup pendulum_bringup.launch.py rviz:=True
 
 
 
-
-
-
-
 ros2 pkg create --build-type ament_cmake  --license Apache-2.0 pendulum_msg
 
 ros2 pkg create --build-type ament_cmake --license Apache-2.0 pendulum_driver
 ros2 pkg create --build-type ament_cmake --license Apache-2.0 pendulum_controller
 
-
-
-
-
+ros2 pkg create --build-type ament_cmake --license Apache-2.0 pendulum_starter
 
 cd /home/ycao/ros2_ads/code_space
 colcon build --packages-select pendulum_driver pendulum_msg
 
+colcon build --packages-select pendulum_controller pendulum_msg
+
 ros2 run pendulum_driver pendulum_driver_node
+
+ros2 run pendulum_controller pendulum_controller_node
+
+ros2 topic pub -1 /teleop pendulum2_msgs/msg/PendulumTeleop "cart_position: 5.0"
+
+
+
+
+
+echo "alias source_colcon='source install/local_setup.bash" >> ~/.bashrc
+
+
+
+colcon build --packages-select pendulum_starter pendulum_driver pendulum_controller pendulum_msg
 
 
 TODO（时间待定）：研究 Runge Kutta 求解微分方程的原理，并利用 Runge Kutta 求解简化后的倒立摆动力学方程
@@ -195,8 +207,6 @@ TODO（时间待定）：研究 Runge Kutta 求解微分方程的原理，并利
 // Runge Kutta method: 
 // https://www.cnblogs.com/neoLin/p/10999688.html
 // https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods
-
-
 
 review后的思路：
     第一，一阶常微分方程，指的是类似dy/dx = f(x, y)，方程的解是一个方程，而不是数，即y = f(x)，给出一个x，可得到对应的y值。
@@ -212,7 +222,4 @@ review后的思路：
     第一，整个倒立摆样例的思路是，控制器发出水平力作为倒立摆的唯一输入；驱动器接受力，根据动力学方程，求得下一时刻小车位置，速度，摆杆角度，角速度（因为他们都是时间的函数），求得的方法就是用四阶Runge-Kutta的方法求解两个二阶常微分方程，最终可得到四个输出值，作为倒立摆的状态值，反馈给控制器
 
 
-
-
-echo "alias clean_colcon='rm -rf build/ install/ log/'" >> ~/.bashrc
 
